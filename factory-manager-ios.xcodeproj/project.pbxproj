@@ -14,9 +14,9 @@
 		C49374D827854BE100DFD42A /* factory_manager_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C49374D627854BE100DFD42A /* factory_manager_ios.xcdatamodeld */; };
 		C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49374D927854BE300DFD42A /* Assets.xcassets */; };
 		C49374DD27854BE300DFD42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49374DB27854BE300DFD42A /* LaunchScreen.storyboard */; };
-		C49374E827854BE400DFD42A /* factory_manager_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374E727854BE400DFD42A /* factory_manager_iosTests.swift */; };
-		C49374F227854BE400DFD42A /* factory_manager_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374F127854BE400DFD42A /* factory_manager_iosUITests.swift */; };
-		C49374F427854BE400DFD42A /* factory_manager_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374F327854BE400DFD42A /* factory_manager_iosUITestsLaunchTests.swift */; };
+		C493750527854DB600DFD42A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493750327854DB600DFD42A /* LoginViewController.swift */; };
+		C493750627854DB600DFD42A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C493750427854DB600DFD42A /* LoginViewController.xib */; };
+		C4937509278550A900DFD42A /* OrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4937508278550A800DFD42A /* OrangeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +47,10 @@
 		C49374DC27854BE300DFD42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C49374DE27854BE300DFD42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C49374E327854BE400DFD42A /* factory-manager-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "factory-manager-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C49374E727854BE400DFD42A /* factory_manager_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = factory_manager_iosTests.swift; sourceTree = "<group>"; };
 		C49374ED27854BE400DFD42A /* factory-manager-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "factory-manager-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C49374F127854BE400DFD42A /* factory_manager_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = factory_manager_iosUITests.swift; sourceTree = "<group>"; };
-		C49374F327854BE400DFD42A /* factory_manager_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = factory_manager_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C493750327854DB600DFD42A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C493750427854DB600DFD42A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C4937508278550A800DFD42A /* OrangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				C49374CC27854BE000DFD42A /* factory-manager-ios */,
-				C49374E627854BE400DFD42A /* factory-manager-iosTests */,
-				C49374F027854BE400DFD42A /* factory-manager-iosUITests */,
 				C49374CB27854BE000DFD42A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +99,8 @@
 		C49374CC27854BE000DFD42A /* factory-manager-ios */ = {
 			isa = PBXGroup;
 			children = (
+				C49375072785508500DFD42A /* misc */,
+				C493750027854D5C00DFD42A /* LoginScreen */,
 				C49374CD27854BE000DFD42A /* AppDelegate.swift */,
 				C49374CF27854BE000DFD42A /* SceneDelegate.swift */,
 				C49374D127854BE000DFD42A /* ViewController.swift */,
@@ -113,21 +113,21 @@
 			path = "factory-manager-ios";
 			sourceTree = "<group>";
 		};
-		C49374E627854BE400DFD42A /* factory-manager-iosTests */ = {
+		C493750027854D5C00DFD42A /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				C49374E727854BE400DFD42A /* factory_manager_iosTests.swift */,
+				C493750327854DB600DFD42A /* LoginViewController.swift */,
+				C493750427854DB600DFD42A /* LoginViewController.xib */,
 			);
-			path = "factory-manager-iosTests";
+			path = LoginScreen;
 			sourceTree = "<group>";
 		};
-		C49374F027854BE400DFD42A /* factory-manager-iosUITests */ = {
+		C49375072785508500DFD42A /* misc */ = {
 			isa = PBXGroup;
 			children = (
-				C49374F127854BE400DFD42A /* factory_manager_iosUITests.swift */,
-				C49374F327854BE400DFD42A /* factory_manager_iosUITestsLaunchTests.swift */,
+				C4937508278550A800DFD42A /* OrangeButton.swift */,
 			);
-			path = "factory-manager-iosUITests";
+			path = misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C493750627854DB600DFD42A /* LoginViewController.xib in Resources */,
 				C49374DD27854BE300DFD42A /* LaunchScreen.storyboard in Resources */,
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
 				C49374D527854BE100DFD42A /* Main.storyboard in Resources */,
@@ -262,8 +263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49374D827854BE100DFD42A /* factory_manager_ios.xcdatamodeld in Sources */,
+				C4937509278550A900DFD42A /* OrangeButton.swift in Sources */,
 				C49374D227854BE000DFD42A /* ViewController.swift in Sources */,
 				C49374CE27854BE000DFD42A /* AppDelegate.swift in Sources */,
+				C493750527854DB600DFD42A /* LoginViewController.swift in Sources */,
 				C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C49374E827854BE400DFD42A /* factory_manager_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C49374F227854BE400DFD42A /* factory_manager_iosUITests.swift in Sources */,
-				C49374F427854BE400DFD42A /* factory_manager_iosUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
