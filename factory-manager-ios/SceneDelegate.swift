@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let winScene = (scene as? UIWindowScene) else { return }
         let scene = UIWindow(windowScene: winScene)
         
-        let view = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let view = nomenclatureViewController(nibName: "nomenclatureViewController", bundle: nil)
         scene.rootViewController = view
         self.window = scene
         

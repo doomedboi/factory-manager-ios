@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C426084D278719FA00B99A76 /* mySegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426084C278719FA00B99A76 /* mySegmentController.swift */; };
+		C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */; };
+		C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */; };
 		C49374CE27854BE000DFD42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374CD27854BE000DFD42A /* AppDelegate.swift */; };
 		C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374CF27854BE000DFD42A /* SceneDelegate.swift */; };
 		C49374D227854BE000DFD42A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374D127854BE000DFD42A /* ViewController.swift */; };
@@ -17,6 +20,8 @@
 		C493750527854DB600DFD42A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493750327854DB600DFD42A /* LoginViewController.swift */; };
 		C493750627854DB600DFD42A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C493750427854DB600DFD42A /* LoginViewController.xib */; };
 		C4937509278550A900DFD42A /* OrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4937508278550A800DFD42A /* OrangeButton.swift */; };
+		C493750C278702E800DFD42A /* nomenclatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493750A278702E800DFD42A /* nomenclatureViewController.swift */; };
+		C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C493750B278702E800DFD42A /* nomenclatureViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C426084C278719FA00B99A76 /* mySegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySegmentController.swift; sourceTree = "<group>"; };
+		C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaTableViewCell.swift; sourceTree = "<group>"; };
+		C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaTableViewCell.xib; sourceTree = "<group>"; };
 		C49374CA27854BE000DFD42A /* factory-manager-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "factory-manager-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49374CD27854BE000DFD42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49374CF27854BE000DFD42A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,8 @@
 		C493750327854DB600DFD42A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C493750427854DB600DFD42A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C4937508278550A800DFD42A /* OrangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeButton.swift; sourceTree = "<group>"; };
+		C493750A278702E800DFD42A /* nomenclatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomenclatureViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
+		C493750B278702E800DFD42A /* nomenclatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = nomenclatureViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,11 @@
 				C49374DB27854BE300DFD42A /* LaunchScreen.storyboard */,
 				C49374DE27854BE300DFD42A /* Info.plist */,
 				C49374D627854BE100DFD42A /* factory_manager_ios.xcdatamodeld */,
+				C493750A278702E800DFD42A /* nomenclatureViewController.swift */,
+				C493750B278702E800DFD42A /* nomenclatureViewController.xib */,
+				C426084C278719FA00B99A76 /* mySegmentController.swift */,
+				C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */,
+				C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */,
 			);
 			path = "factory-manager-ios";
 			sourceTree = "<group>";
@@ -235,6 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C493750627854DB600DFD42A /* LoginViewController.xib in Resources */,
+				C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */,
+				C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */,
 				C49374DD27854BE300DFD42A /* LaunchScreen.storyboard in Resources */,
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
 				C49374D527854BE100DFD42A /* Main.storyboard in Resources */,
@@ -263,11 +280,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49374D827854BE100DFD42A /* factory_manager_ios.xcdatamodeld in Sources */,
+				C426084D278719FA00B99A76 /* mySegmentController.swift in Sources */,
 				C4937509278550A900DFD42A /* OrangeButton.swift in Sources */,
 				C49374D227854BE000DFD42A /* ViewController.swift in Sources */,
 				C49374CE27854BE000DFD42A /* AppDelegate.swift in Sources */,
 				C493750527854DB600DFD42A /* LoginViewController.swift in Sources */,
 				C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */,
+				C493750C278702E800DFD42A /* nomenclatureViewController.swift in Sources */,
+				C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
