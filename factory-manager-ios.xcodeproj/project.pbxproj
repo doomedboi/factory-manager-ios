@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C426084D278719FA00B99A76 /* mySegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426084C278719FA00B99A76 /* mySegmentController.swift */; };
+		C404DB60278ABCD40039575D /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404DB5E278ABCD40039575D /* OrdersTableViewCell.swift */; };
+		C404DB61278ABCD40039575D /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C404DB5F278ABCD40039575D /* OrdersTableViewCell.xib */; };
 		C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */; };
 		C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */; };
+		C4790C45278879B800C9D60A /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4790C43278879B800C9D60A /* OrdersViewController.swift */; };
+		C4790C46278879B800C9D60A /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4790C44278879B800C9D60A /* OrdersViewController.xib */; };
+		C4790C49278879CD00C9D60A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4790C47278879CD00C9D60A /* ProfileViewController.swift */; };
+		C4790C4A278879CD00C9D60A /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4790C48278879CD00C9D60A /* ProfileViewController.xib */; };
+		C4790C4D27887C6600C9D60A /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4790C4B27887C6600C9D60A /* TabbarViewController.swift */; };
+		C4790C4E27887C6600C9D60A /* TabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4790C4C27887C6600C9D60A /* TabbarViewController.xib */; };
 		C49374CE27854BE000DFD42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374CD27854BE000DFD42A /* AppDelegate.swift */; };
 		C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374CF27854BE000DFD42A /* SceneDelegate.swift */; };
 		C49374D227854BE000DFD42A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374D127854BE000DFD42A /* ViewController.swift */; };
@@ -42,9 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C426084C278719FA00B99A76 /* mySegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySegmentController.swift; sourceTree = "<group>"; };
+		C404DB5E278ABCD40039575D /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
+		C404DB5F278ABCD40039575D /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
 		C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaTableViewCell.swift; sourceTree = "<group>"; };
 		C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaTableViewCell.xib; sourceTree = "<group>"; };
+		C4790C43278879B800C9D60A /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		C4790C44278879B800C9D60A /* OrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
+		C4790C47278879CD00C9D60A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C4790C48278879CD00C9D60A /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		C4790C4B27887C6600C9D60A /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		C4790C4C27887C6600C9D60A /* TabbarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarViewController.xib; sourceTree = "<group>"; };
 		C49374CA27854BE000DFD42A /* factory-manager-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "factory-manager-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49374CD27854BE000DFD42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49374CF27854BE000DFD42A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +102,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C404DB62278ACAC40039575D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C4790C48278879CD00C9D60A /* ProfileViewController.xib */,
+				C4790C47278879CD00C9D60A /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C404DB63278ACAE00039575D /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				C4790C44278879B800C9D60A /* OrdersViewController.xib */,
+				C4790C43278879B800C9D60A /* OrdersViewController.swift */,
+				C404DB65278ACB2B0039575D /* tableFiles */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		C404DB64278ACAFC0039575D /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				C4790C4C27887C6600C9D60A /* TabbarViewController.xib */,
+				C4790C4B27887C6600C9D60A /* TabbarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		C404DB65278ACB2B0039575D /* tableFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C404DB5E278ABCD40039575D /* OrdersTableViewCell.swift */,
+				C404DB5F278ABCD40039575D /* OrdersTableViewCell.xib */,
+			);
+			path = tableFiles;
+			sourceTree = "<group>";
+		};
+		C404DB66278ACB570039575D /* Nomenclatura */ = {
+			isa = PBXGroup;
+			children = (
+				C493750B278702E800DFD42A /* nomenclatureViewController.xib */,
+				C493750A278702E800DFD42A /* nomenclatureViewController.swift */,
+				C404DB67278ACB670039575D /* tableFiles */,
+			);
+			path = Nomenclatura;
+			sourceTree = "<group>";
+		};
+		C404DB67278ACB670039575D /* tableFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */,
+				C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */,
+			);
+			path = tableFiles;
+			sourceTree = "<group>";
+		};
 		C49374C127854BE000DFD42A = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +179,9 @@
 		C49374CC27854BE000DFD42A /* factory-manager-ios */ = {
 			isa = PBXGroup;
 			children = (
+				C404DB66278ACB570039575D /* Nomenclatura */,
+				C404DB63278ACAE00039575D /* Orders */,
+				C404DB62278ACAC40039575D /* Profile */,
 				C49375072785508500DFD42A /* misc */,
 				C493750027854D5C00DFD42A /* LoginScreen */,
 				C49374CD27854BE000DFD42A /* AppDelegate.swift */,
@@ -119,11 +192,6 @@
 				C49374DB27854BE300DFD42A /* LaunchScreen.storyboard */,
 				C49374DE27854BE300DFD42A /* Info.plist */,
 				C49374D627854BE100DFD42A /* factory_manager_ios.xcdatamodeld */,
-				C493750A278702E800DFD42A /* nomenclatureViewController.swift */,
-				C493750B278702E800DFD42A /* nomenclatureViewController.xib */,
-				C426084C278719FA00B99A76 /* mySegmentController.swift */,
-				C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */,
-				C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */,
 			);
 			path = "factory-manager-ios";
 			sourceTree = "<group>";
@@ -140,6 +208,7 @@
 		C49375072785508500DFD42A /* misc */ = {
 			isa = PBXGroup;
 			children = (
+				C404DB64278ACAFC0039575D /* Tabbar */,
 				C4937508278550A800DFD42A /* OrangeButton.swift */,
 			);
 			path = misc;
@@ -249,8 +318,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C404DB61278ABCD40039575D /* OrdersTableViewCell.xib in Resources */,
+				C4790C46278879B800C9D60A /* OrdersViewController.xib in Resources */,
 				C493750627854DB600DFD42A /* LoginViewController.xib in Resources */,
+				C4790C4A278879CD00C9D60A /* ProfileViewController.xib in Resources */,
 				C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */,
+				C4790C4E27887C6600C9D60A /* TabbarViewController.xib in Resources */,
 				C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */,
 				C49374DD27854BE300DFD42A /* LaunchScreen.storyboard in Resources */,
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
@@ -280,13 +353,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49374D827854BE100DFD42A /* factory_manager_ios.xcdatamodeld in Sources */,
-				C426084D278719FA00B99A76 /* mySegmentController.swift in Sources */,
 				C4937509278550A900DFD42A /* OrangeButton.swift in Sources */,
+				C4790C4D27887C6600C9D60A /* TabbarViewController.swift in Sources */,
+				C4790C45278879B800C9D60A /* OrdersViewController.swift in Sources */,
 				C49374D227854BE000DFD42A /* ViewController.swift in Sources */,
+				C4790C49278879CD00C9D60A /* ProfileViewController.swift in Sources */,
 				C49374CE27854BE000DFD42A /* AppDelegate.swift in Sources */,
 				C493750527854DB600DFD42A /* LoginViewController.swift in Sources */,
 				C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */,
 				C493750C278702E800DFD42A /* nomenclatureViewController.swift in Sources */,
+				C404DB60278ABCD40039575D /* OrdersTableViewCell.swift in Sources */,
 				C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
