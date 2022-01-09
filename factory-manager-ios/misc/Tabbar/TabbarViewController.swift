@@ -21,19 +21,20 @@ class TabbarViewController: UITabBarController {
         let profileNC = UINavigationController(rootViewController: ProfileViewController())
         
         nomenclatureNC.tabBarItem.title = "Номенклатура"
-        nomenclatureNC.tabBarItem.image = UIImage(systemName: "circle")
+        nomenclatureNC.tabBarItem.image = UIImage(named: "nomenclature_i")
         
         
         ordersNC.tabBarItem.title = "orders"
-        ordersNC.tabBarItem.image = UIImage(systemName: "circle")
+        ordersNC.tabBarItem.image = UIImage(named: "basket_i")
         
         
         profileNC.tabBarItem.title = "profile"
-        profileNC.tabBarItem.image = UIImage(systemName: "circle")
+        profileNC.tabBarItem.image = UIImage(named: "profile_i")
 
         self.setViewControllers([nomenclatureNC, ordersNC, profileNC], animated: true)
         modalPresentationStyle = .overFullScreen
-        print("KEEEK")
+        
+        self.tabBar.tintColor = .orange
     }
 }
 
