@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ufh-ON-mSU">
-                            <rect key="frame" x="0.0" y="16" width="414" height="41"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="4UV-QD-ytQ"/>
                             </constraints>
@@ -36,17 +36,17 @@
                             </segments>
                         </segmentedControl>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="99" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1mH-ee-iqI">
-                            <rect key="frame" x="6" y="71" width="402" height="735"/>
+                            <rect key="frame" x="6" y="55" width="402" height="751"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="1mH-ee-iqI" secondAttribute="trailing" constant="6" id="1O6-BW-sqp"/>
-                        <constraint firstItem="Ufh-ON-mSU" firstAttribute="top" secondItem="1qz-aH-hJN" secondAttribute="top" constant="16" id="6bU-Se-B8V"/>
                         <constraint firstAttribute="trailing" secondItem="Ufh-ON-mSU" secondAttribute="trailing" id="J1w-Fg-g0C"/>
                         <constraint firstItem="Ufh-ON-mSU" firstAttribute="leading" secondItem="1qz-aH-hJN" secondAttribute="leading" id="MGy-e0-CE3"/>
                         <constraint firstAttribute="bottom" secondItem="1mH-ee-iqI" secondAttribute="bottom" constant="12" id="W7u-jg-DZr"/>
+                        <constraint firstItem="Ufh-ON-mSU" firstAttribute="top" secondItem="1qz-aH-hJN" secondAttribute="top" id="c6W-DI-KE3"/>
                         <constraint firstItem="1mH-ee-iqI" firstAttribute="top" secondItem="Ufh-ON-mSU" secondAttribute="bottom" constant="15" id="xnY-5Z-j22"/>
                         <constraint firstItem="1mH-ee-iqI" firstAttribute="leading" secondItem="1qz-aH-hJN" secondAttribute="leading" constant="6" id="z5d-8V-J6v"/>
                     </constraints>

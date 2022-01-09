@@ -66,6 +66,7 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         UILabel.appearance(whenContainedInInstancesOf: [UISegmentedControl.self]).numberOfLines = 0
         commonInit()
+        //(TabbarViewController(nibName: "TabbarViewController", bundle: nil), animated: true, completion: nil)
     }
     
     @objc func presentContent(target: UISegmentedControl) {
