@@ -26,3 +26,25 @@ struct userLoginRequstModel: Decodable {
 struct ApiError: Decodable {
     let errors: Dictionary<String, [String]>
 }
+
+struct ClothModel: Encodable, Decodable {
+    let article: Int
+    let name: String
+    let color: String
+    let print: String
+    let image: String
+    let composition: String
+    let width: Float
+    let price: Float
+}
+
+struct AccessoryModel: Decodable {
+    let article: Int
+    let name: String
+    let type: String
+    let width: Int
+    let length: Int
+    let weight: Float
+    let image: String
+    let price: Float
+}

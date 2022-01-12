@@ -51,4 +51,12 @@ class NomenclaturaTableViewCell: UITableViewCell {
         nameLabel.text = model.name
     }
     
+    func bindCloth(_ model: ClothModel) {
+        nameLabel.text = model.name
+        
+    }
+    
+    func bindAccessory(_ model: AccessoryModel) {
+        nameLabel.text = model.name
+    }
 }

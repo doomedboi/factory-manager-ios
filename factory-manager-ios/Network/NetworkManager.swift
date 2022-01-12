@@ -116,4 +116,62 @@ extension NetworkManager {
         task.resume()
     }
     
+    static func cloth(complition: @escaping ([ClothModel])->(Void)) {
+        let components = URLComponents(string: "http://109.196.164.54/api/v1/cloth")!
+        
+        var request = URLRequest(url: components.url!)
+
+        var headerPayload = "Bearer "
+        headerPayload += CoreDataManager.shared.userToken!
+        
+        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let data = data,
+                  let response = response as? HTTPURLResponse else {
+                return
+            }
+            
+            do {
+                let castedData = try NetworkManager.decoder.decode([ClothModel].self, from: data)
+                complition(castedData)
+            } catch(let e) {
+                print("decode err: \(e)")
+            } 
+            
+        }
+        task.resume()
+    }
+    
+    static func accessory(complition: @escaping ([AccessoryModel])->(Void)) {
+        let components = URLComponents(string: "http://109.196.164.54/api/v1/accessory")!
+        
+        var request = URLRequest(url: components.url!)
+
+        var headerPayload = "Bearer "
+        headerPayload += CoreDataManager.shared.userToken!
+        
+        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let data = data,
+                  let response = response as? HTTPURLResponse else {
+                return
+            }
+            
+            do {
+                let castedData = try NetworkManager.decoder.decode([AccessoryModel].self, from: data)
+                complition(castedData)
+            } catch(let e) {
+                print("decode err: \(e)")
+            }
+            
+        }
+        task.resume()
+        
+    }
+    
+    
 }

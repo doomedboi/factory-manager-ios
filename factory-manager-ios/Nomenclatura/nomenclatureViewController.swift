@@ -13,46 +13,40 @@ struct nomenTableViewModel {
 }
 
 class nomenclatureViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var clothData: [ClothModel]?
+    var accessoryData: [AccessoryModel]?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[selectedCategoryIndex].items.count
+        if selectedCategoryIndex == 1 {
+            return clothData?.count ?? 0
+        } else if selectedCategoryIndex == 2 {
+            return accessoryData?.count ?? 0
+        }
+        return 0
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = self.data[selectedCategoryIndex].items[indexPath.row]
         
         let cell = nomenclatureList.dequeueReusableCell(withIdentifier: "NomenclaturaTableViewCell", for: indexPath)
         guard let upcastedCell = cell as? NomenclaturaTableViewCell else {
             return UITableViewCell()
         }
         
-        upcastedCell.bind(data)
+        if selectedCategoryIndex == 1 {
+            upcastedCell.bindCloth(clothData![indexPath.row])
+        } else if selectedCategoryIndex == 2 {
+            upcastedCell.bindAccessory(accessoryData![indexPath.row])
+        } // else {}
         print("good")
         return upcastedCell
     }
         
     
-    private let data: [nomenTableViewModel] = {
-        let first1: [nomenclatureModel] = [
-            nomenclatureModel(icon: UIImage(), name: "kk", article: "kk")
-        ]
-        
-        let first2: [nomenclatureModel] = [
-            nomenclatureModel(icon: UIImage(), name: "xx", article: "xx"),
-            nomenclatureModel(icon: UIImage(), name: "xx1", article: "xx2")
-        ]
-        
-        let first3: [nomenclatureModel] = [
-            nomenclatureModel(icon: UIImage(), name: "furnitura", article: ".."),
-            nomenclatureModel(icon: UIImage(), name: "furnitura2", article: "..2")
-        ]
-        
-        return [
-            nomenTableViewModel(category: "kk", items: first1),
-            nomenTableViewModel(category: "xx", items: first2),
-            nomenTableViewModel(category: "zz", items: first3)
-        ]
-    }()
+    private func fetchDataFromServer() {
+        //NetworkManager.cloth()
+    }
     
     @IBOutlet weak var nomenclatureList: UITableView!
     @IBOutlet weak var segmentControll: UISegmentedControl!
@@ -69,8 +63,22 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         //(TabbarViewController(nibName: "TabbarViewController", bundle: nil), animated: true, completion: nil)
         
         self.navigationController?.isNavigationBarHidden = true
+        
+        print("heeeeeeeeee")
+        
         }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NetworkManager.cloth() { responseObjectsArray in
+            self.clothData = responseObjectsArray
+        }
+        NetworkManager.accessory() {
+            responseObjectsArray in
+            self.accessoryData = responseObjectsArray
+        }
+    }
     
     @objc func presentContent(target: UISegmentedControl) {
         guard target == self.segmentControll else { return }
