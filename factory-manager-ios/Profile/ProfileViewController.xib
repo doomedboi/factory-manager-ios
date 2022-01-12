@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="factory_manager_ios" customModuleProvider="target">
             <connections>
+                <outlet property="firstNameLabel" destination="5Lc-uX-OKg" id="aib-gm-5WO"/>
+                <outlet property="lastNameLabel" destination="gRo-7Z-bsi" id="EcP-qr-s2Q"/>
+                <outlet property="middleNameLabel" destination="XRS-33-cQJ" id="4S0-UE-pGJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

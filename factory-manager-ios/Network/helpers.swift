@@ -19,4 +19,5 @@ class NetworkHelper {
         }
         return errorsString
     }
+    
 }

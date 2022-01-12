@@ -85,4 +85,35 @@ extension NetworkManager {
         task.resume()
         
     }
+    
+    static func me(completion: @escaping ((userModel) -> Void)) {
+        let components = URLComponents(string: "http://109.196.164.54/api/v1/me")!
+        
+        var request = URLRequest(url: components.url!)
+
+        var headerPayload = "Bearer "
+        headerPayload += CoreDataManager.shared.userToken!
+        
+        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
+                (200 ..< 300) ~= response.statusCode,
+                error == nil else {
+                    // return error here
+                    return
+            }
+            
+            do {
+                let userInfo = try NetworkManager.decoder.decode(userModel.self, from: data)
+                completion(userInfo)
+                return
+            } catch (let e) {
+                print("decode error \(e)")
+            }
+        }
+        task.resume()
+    }
+    
 }

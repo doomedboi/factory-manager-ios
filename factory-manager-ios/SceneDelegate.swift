@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let winScene = (scene as? UIWindowScene) else { return }
         
         
-        if let _ = UserDefaults.standard.object(forKey: CoreDataManager.shared.kUserTokenKey) {
-            
+        
+        if let _ = CoreDataManager.shared.userToken {
         
         let scene = UIWindow(windowScene: winScene)
         

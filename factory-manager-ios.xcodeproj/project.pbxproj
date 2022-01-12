@@ -11,6 +11,8 @@
 		C404DB61278ABCD40039575D /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C404DB5F278ABCD40039575D /* OrdersTableViewCell.xib */; };
 		C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */; };
 		C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */; };
+		C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */; };
+		C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */; };
 		C4790C45278879B800C9D60A /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4790C43278879B800C9D60A /* OrdersViewController.swift */; };
 		C4790C46278879B800C9D60A /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4790C44278879B800C9D60A /* OrdersViewController.xib */; };
 		C4790C49278879CD00C9D60A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4790C47278879CD00C9D60A /* ProfileViewController.swift */; };
@@ -57,6 +59,8 @@
 		C404DB5F278ABCD40039575D /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
 		C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaTableViewCell.swift; sourceTree = "<group>"; };
 		C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaTableViewCell.xib; sourceTree = "<group>"; };
+		C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaDetailsViewController.swift; sourceTree = "<group>"; };
+		C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaDetailsViewController.xib; sourceTree = "<group>"; };
 		C4790C43278879B800C9D60A /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		C4790C44278879B800C9D60A /* OrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
 		C4790C47278879CD00C9D60A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 		C404DB66278ACB570039575D /* Nomenclatura */ = {
 			isa = PBXGroup;
 			children = (
+				C448C3D7278EA8130011BEA4 /* nomenclaturaDetails */,
 				C493750B278702E800DFD42A /* nomenclatureViewController.xib */,
 				C493750A278702E800DFD42A /* nomenclatureViewController.swift */,
 				C404DB67278ACB670039575D /* tableFiles */,
@@ -164,6 +169,15 @@
 				C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */,
 			);
 			path = tableFiles;
+			sourceTree = "<group>";
+		};
+		C448C3D7278EA8130011BEA4 /* nomenclaturaDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */,
+				C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */,
+			);
+			path = nomenclaturaDetails;
 			sourceTree = "<group>";
 		};
 		C482471E278B044900B09424 /* Network */ = {
@@ -354,6 +368,7 @@
 				C4790C4E27887C6600C9D60A /* TabbarViewController.xib in Resources */,
 				C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */,
 				C49374DD27854BE300DFD42A /* LaunchScreen.storyboard in Resources */,
+				C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */,
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
 				C49374D527854BE100DFD42A /* Main.storyboard in Resources */,
 			);
@@ -383,6 +398,7 @@
 				C4824720278B046900B09424 /* helpers.swift in Sources */,
 				C49374D827854BE100DFD42A /* factory_manager_ios.xcdatamodeld in Sources */,
 				C4937509278550A900DFD42A /* OrangeButton.swift in Sources */,
+				C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */,
 				C4790C4D27887C6600C9D60A /* TabbarViewController.swift in Sources */,
 				C4790C45278879B800C9D60A /* OrdersViewController.swift in Sources */,
 				C49374D227854BE000DFD42A /* ViewController.swift in Sources */,

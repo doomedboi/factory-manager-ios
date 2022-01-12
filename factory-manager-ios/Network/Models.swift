@@ -9,8 +9,8 @@ import Foundation
 
 struct userModel : Encodable, Decodable {
     let login: String
-    let password: String
-    let role: String
+    let name: String
+    let role: Int
 }
 
 struct userLoginBody : Encodable {
