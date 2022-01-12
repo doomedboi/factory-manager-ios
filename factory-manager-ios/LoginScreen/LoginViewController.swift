@@ -11,6 +11,12 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var topLabelConstr: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var loginTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     @IBOutlet weak var welcomeTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +33,37 @@ class LoginViewController: UIViewController {
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didLoginBtnTap(_ sender: Any) {
+        let login = loginTextField.text ?? ""
+        let passw = passwordTextField.text ?? ""
+        
+        let encoder = JSONEncoder()
+        let body = userLoginBody(login: login, password: passw)
+        
+        print("here")
+        do {
+            let reqBody = try encoder.encode(body)
+                    let queue = DispatchQueue.global(qos: .utility)
+            NetworkManager.login(reqBody) { user in
+                        queue.async {
+                            print(user.accessToken)
+                            UserDefaults.standard.set(user.accessToken , forKey: CoreDataManager.shared.kUserTokenKey)
+                        }
+                        DispatchQueue.main.async {
+                            let vc = TabbarViewController(nibName: "TabbarViewController", bundle: nil)
+                            vc.modalPresentationStyle = .overFullScreen
+                            self.present(vc, animated: true, completion: nil)
+                        }
+                    } onError: { err in
+                        DispatchQueue.main.async {
+                            //NetworkHelper.getApiErrors(errors: err.errors)
+                        }
+                    }
+                } catch {
+                    print(error)
+                }
+        
     }
-    */
+    
 
 }

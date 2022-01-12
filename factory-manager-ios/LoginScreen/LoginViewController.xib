@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="factory_manager_ios" customModuleProvider="target">
             <connections>
+                <outlet property="loginTextField" destination="tx1-FS-Xqd" id="FYc-ft-n5h"/>
+                <outlet property="passwordTextField" destination="d20-Ex-JuH" id="qL3-Dx-4MI"/>
                 <outlet property="topLabelConstr" destination="ayF-cP-gm0" id="vkj-jF-o4F"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeTitle" destination="Z0q-hW-hHM" id="JXB-YF-uy5"/>
@@ -58,6 +60,9 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Войти"/>
+                            <connections>
+                                <action selector="didLoginBtnTap:" destination="-1" eventType="touchUpInside" id="jjk-Hg-924"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

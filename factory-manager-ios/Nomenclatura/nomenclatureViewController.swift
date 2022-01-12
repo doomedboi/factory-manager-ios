@@ -67,7 +67,10 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         UILabel.appearance(whenContainedInInstancesOf: [UISegmentedControl.self]).numberOfLines = 0
         commonInit()
         //(TabbarViewController(nibName: "TabbarViewController", bundle: nil), animated: true, completion: nil)
-    }
+        
+        self.navigationController?.isNavigationBarHidden = true
+        }
+
     
     @objc func presentContent(target: UISegmentedControl) {
         guard target == self.segmentControll else { return }
