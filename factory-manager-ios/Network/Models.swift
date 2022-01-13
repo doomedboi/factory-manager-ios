@@ -62,3 +62,21 @@ struct ProductModel: Decodable {
     let accessories: [AccessoryModel]
     let previous: Int?
 }
+
+struct ProductsContainerModel: Decodable {
+    let product: ProductModel
+}
+
+struct OrderModel: Decodable {
+    let id: Int?
+    let creation_date: String
+    let completion_date: String?
+    let stage: Int?
+    let manager: userModel
+    let customer: userModel
+    let cost: Float
+    let products: [ProductsContainerModel]
+}
+
+
+

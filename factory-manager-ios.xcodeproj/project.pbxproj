@@ -36,6 +36,7 @@
 		C493750C278702E800DFD42A /* nomenclatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493750A278702E800DFD42A /* nomenclatureViewController.swift */; };
 		C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C493750B278702E800DFD42A /* nomenclatureViewController.xib */; };
 		C4A3E722279010C20093EA66 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3E721279010C20093EA66 /* extension.swift */; };
+		C4A3E7252790463F0093EA66 /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3E7242790463F0093EA66 /* models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		C493750A278702E800DFD42A /* nomenclatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomenclatureViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		C493750B278702E800DFD42A /* nomenclatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = nomenclatureViewController.xib; sourceTree = "<group>"; };
 		C4A3E721279010C20093EA66 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		C4A3E7242790463F0093EA66 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				C4790C44278879B800C9D60A /* OrdersViewController.xib */,
 				C4790C43278879B800C9D60A /* OrdersViewController.swift */,
 				C404DB65278ACB2B0039575D /* tableFiles */,
+				C4A3E7242790463F0093EA66 /* models.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				C493750527854DB600DFD42A /* LoginViewController.swift in Sources */,
 				C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */,
 				C493750C278702E800DFD42A /* nomenclatureViewController.swift in Sources */,
+				C4A3E7252790463F0093EA66 /* models.swift in Sources */,
 				C404DB60278ABCD40039575D /* OrdersTableViewCell.swift in Sources */,
 				C4824724278B1C3900B09424 /* NetworkManager.swift in Sources */,
 				C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */,

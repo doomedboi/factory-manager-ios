@@ -24,11 +24,11 @@ class TabbarViewController: UITabBarController {
         nomenclatureNC.tabBarItem.image = UIImage(named: "nomenclature_i")
         
         
-        ordersNC.tabBarItem.title = "orders"
+        ordersNC.tabBarItem.title = "Заказы"
         ordersNC.tabBarItem.image = UIImage(named: "basket_i")
         
         
-        profileNC.tabBarItem.title = "profile"
+        profileNC.tabBarItem.title = "Профиль"
         profileNC.tabBarItem.image = UIImage(named: "profile_i")
 
         self.setViewControllers([nomenclatureNC, ordersNC, profileNC], animated: true)

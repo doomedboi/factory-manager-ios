@@ -7,12 +7,6 @@
 
 import UIKit
 
-struct orderModel {
-    let number: String
-    let customer: String
-    let status: String
-}
-
 class OrdersTableViewCell: UITableViewCell {
 
     @IBOutlet weak var numberLabel: UILabel!
@@ -45,10 +39,10 @@ class OrdersTableViewCell: UITableViewCell {
           contentView.layer.cornerRadius = 8
     }
     
-    func bind(_ model: orderModel) {
-        numberLabel.text = model.number
-        customerLabel.text = model.customer
-        statusLabel.text = model.status
+    func bind(_ model: OrderModel) {
+        numberLabel.text = String(model.id!)
+        customerLabel.text = model.customer.name
+        statusLabel.text = orderStages[model.stage!]
     }
     
 }

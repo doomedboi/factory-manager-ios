@@ -6,33 +6,39 @@
 //
 
 import UIKit
+import CoreData
 
 class OrdersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var ordersTable: UITableView!
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        
+        return data?.count ?? 0
     }
     
-    private let data: [orderModel] = [
-            orderModel(number: "xxx1", customer: "OOO xxx1", status: "Well done"),
-            orderModel(number: "xxx2", customer: "OOO yyy1", status: "Fuck this shit")
-            
-    ]
+    private var data: [OrderModel]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.ordersTable.reloadData()
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = self.data[indexPath.row]
         
         let cell = ordersTable.dequeueReusableCell(withIdentifier: "OrdersTableViewCell", for: indexPath)
         guard let upcastedCell = cell as? OrdersTableViewCell else {
             return UITableViewCell()
         }
         
-        upcastedCell.bind(data)
+        upcastedCell.bind(data![indexPath.row])
         print("good")
         return upcastedCell
     }
     
 
-    @IBOutlet weak var ordersTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +51,15 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
         ordersTable.delegate = self
         ordersTable.register(UINib(nibName: "OrdersTableViewCell", bundle: nil), forCellReuseIdentifier: "OrdersTableViewCell")
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            NetworkManager.order() { responseObject in
+                self.data = responseObject
+            }
+        }
     }
     
     
