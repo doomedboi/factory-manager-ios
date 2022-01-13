@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 struct nomenclatureModel {
     let icon: UIImage
@@ -20,6 +21,7 @@ class NomenclaturaTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var articleLabel: UILabel!
     
+    @IBOutlet weak var cellImage: UIImageView!
     
     
     override func awakeFromNib() {
@@ -47,21 +49,28 @@ class NomenclaturaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    private func setOutlets(name: String, article: String) {
+    private func setOutlets(name: String, article: String, imagePath: String) {
         nameLabel.text = name
         articleLabel.text = article
+        
+        //  image routine
+        var baseUrl = "http://109.196.164.54/"
+        baseUrl += imagePath
+        guard let downloadUrl = URL(string: baseUrl) else { return }
+        
+        self.cellImage.sd_setImage(with: downloadUrl, completed: nil)
     }
     
     //  Generic come on but later
     func bindCloth(_ model: ClothModel) {
-        self.setOutlets(name: model.name, article: String(model.article))
+        self.setOutlets(name: model.name, article: String(model.article), imagePath: model.image)
     }
     
     func bindAccessory(_ model: AccessoryModel) {
-        self.setOutlets(name: model.name, article: String(model.article))
+        self.setOutlets(name: model.name, article: String(model.article), imagePath: model.image)
     }
     
     func bindProduct(_ model: ProductModel) {
-        self.setOutlets(name: model.name, article: String(model.article))
+        self.setOutlets(name: model.name, article: String(model.article), imagePath: model.image)
     }
 }
