@@ -15,6 +15,14 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var firstNameLabel: UILabel!
     
+    @IBOutlet weak var typeOfAccountLabel: UILabel!
+    
+    let roles = [1: "Заказчик",
+                 2: "Менеджер",
+                 3: "Кладовщик",
+                 4: "Швея",
+                 5: "Директор"
+    ]
     
     @IBAction func exitAccountDidTap(_ sender: Any) {
         
@@ -43,6 +51,7 @@ class ProfileViewController: UIViewController {
             self.lastNameLabel.text = splitName[0] ?? ""
             self.middleNameLabel.text = namesCount > 1 ? splitName[1] : ""
             self.firstNameLabel.text =  namesCount > 2 ? splitName[2] : ""
+                self.typeOfAccountLabel.text = self.roles[ responseObject.role]
             }
             
             
