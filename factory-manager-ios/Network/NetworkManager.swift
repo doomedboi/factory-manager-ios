@@ -173,5 +173,32 @@ extension NetworkManager {
         
     }
     
-    
+    static func product(complition: @escaping ([ProductModel])->(Void)) {
+        let components = URLComponents(string: "http://109.196.164.54/api/v1/product")!
+        
+        var request = URLRequest(url: components.url!)
+
+        var headerPayload = "Bearer "
+        headerPayload += CoreDataManager.shared.userToken!
+        
+        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let data = data,
+                  let response = response as? HTTPURLResponse else {
+                return
+            }
+            
+            do {
+                let castedData = try NetworkManager.decoder.decode([ProductModel].self, from: data)
+                complition(castedData)
+                print(castedData)
+            } catch(let e) {
+                print("decode err: \(e)")
+            }
+            
+        }
+        task.resume()
+    }
 }

@@ -48,3 +48,17 @@ struct AccessoryModel: Decodable {
     let image: String
     let price: Float
 }
+
+struct ProductModel: Decodable {
+    let id: Int
+    let article: Int
+    let name: String
+    let width: Int
+    let length: Int
+    let image: String
+    let comment: String
+    let price: Float
+    let clothes: [ClothModel]
+    let accessories: [AccessoryModel]
+    let previous: Int?
+}

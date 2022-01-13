@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudKit
 
 struct nomenTableViewModel {
     let category: String
@@ -14,16 +15,39 @@ struct nomenTableViewModel {
 
 class nomenclatureViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var clothData: [ClothModel]?
-    var accessoryData: [AccessoryModel]?
+    var clothData: [ClothModel]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.nomenclatureList.reloadData()
+            }
+        }
+    }
+    var accessoryData: [AccessoryModel]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.nomenclatureList.reloadData()
+            }
+        }
+    }
+    var productData: [ProductModel]? {
+        didSet {
+            DispatchQueue.main.async {
+            self.nomenclatureList.reloadData()
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var size: Int = 0
+        
         if selectedCategoryIndex == 1 {
-            return clothData?.count ?? 0
+            size = clothData?.count ?? 0
         } else if selectedCategoryIndex == 2 {
-            return accessoryData?.count ?? 0
+            size = accessoryData?.count ?? 0
+        } else {
+            size = productData?.count ?? 0
         }
-        return 0
+        return size
     }
     
     
@@ -38,7 +62,9 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
             upcastedCell.bindCloth(clothData![indexPath.row])
         } else if selectedCategoryIndex == 2 {
             upcastedCell.bindAccessory(accessoryData![indexPath.row])
-        } // else {}
+        }  else if selectedCategoryIndex == 0 {
+            upcastedCell.bindProduct(productData![indexPath.row])
+        }
         print("good")
         return upcastedCell
     }
@@ -60,17 +86,17 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         UILabel.appearance(whenContainedInInstancesOf: [UISegmentedControl.self]).numberOfLines = 0
         commonInit()
-        //(TabbarViewController(nibName: "TabbarViewController", bundle: nil), animated: true, completion: nil)
-        
         self.navigationController?.isNavigationBarHidden = true
         
-        print("heeeeeeeeee")
-        
-        }
+        self.nomenclatureList.reloadData()
+    }
 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            
+        
         NetworkManager.cloth() { responseObjectsArray in
             self.clothData = responseObjectsArray
         }
@@ -78,7 +104,15 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
             responseObjectsArray in
             self.accessoryData = responseObjectsArray
         }
+        NetworkManager.product() {
+            responseObjectsArray in
+            self.productData = responseObjectsArray
+        }
+        }
+        
+        
     }
+    
     
     @objc func presentContent(target: UISegmentedControl) {
         guard target == self.segmentControll else { return }

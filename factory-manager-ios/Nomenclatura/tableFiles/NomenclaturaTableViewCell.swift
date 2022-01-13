@@ -14,14 +14,14 @@ struct nomenclatureModel {
 }
 
 class NomenclaturaTableViewCell: UITableViewCell {
-
-    
-    
-    
-    
+        
     @IBOutlet weak var designView: UIView!
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var articleLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
@@ -47,16 +47,21 @@ class NomenclaturaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func bind(_ model: nomenclatureModel) {
-        nameLabel.text = model.name
+    private func setOutlets(name: String, article: String) {
+        nameLabel.text = name
+        articleLabel.text = article
     }
     
+    //  Generic come on but later
     func bindCloth(_ model: ClothModel) {
-        nameLabel.text = model.name
-        
+        self.setOutlets(name: model.name, article: String(model.article))
     }
     
     func bindAccessory(_ model: AccessoryModel) {
-        nameLabel.text = model.name
+        self.setOutlets(name: model.name, article: String(model.article))
+    }
+    
+    func bindProduct(_ model: ProductModel) {
+        self.setOutlets(name: model.name, article: String(model.article))
     }
 }
