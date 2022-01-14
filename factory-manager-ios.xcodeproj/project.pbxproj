@@ -36,6 +36,10 @@
 		C4937509278550A900DFD42A /* OrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4937508278550A800DFD42A /* OrangeButton.swift */; };
 		C493750C278702E800DFD42A /* nomenclatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493750A278702E800DFD42A /* nomenclatureViewController.swift */; };
 		C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C493750B278702E800DFD42A /* nomenclatureViewController.xib */; };
+		C4A1A98B27911CEF00A84066 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1A98927911CEF00A84066 /* DetailsViewController.swift */; };
+		C4A1A98C27911CF000A84066 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A1A98A27911CEF00A84066 /* DetailsViewController.xib */; };
+		C4A1A9912791325E00A84066 /* AccessoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1A98F2791325E00A84066 /* AccessoryDetailsViewController.swift */; };
+		C4A1A9922791325E00A84066 /* AccessoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A1A9902791325E00A84066 /* AccessoryDetailsViewController.xib */; };
 		C4A3E722279010C20093EA66 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3E721279010C20093EA66 /* extension.swift */; };
 		C4A3E7252790463F0093EA66 /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3E7242790463F0093EA66 /* models.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +94,10 @@
 		C4937508278550A800DFD42A /* OrangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeButton.swift; sourceTree = "<group>"; };
 		C493750A278702E800DFD42A /* nomenclatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomenclatureViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		C493750B278702E800DFD42A /* nomenclatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = nomenclatureViewController.xib; sourceTree = "<group>"; };
+		C4A1A98927911CEF00A84066 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C4A1A98A27911CEF00A84066 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		C4A1A98F2791325E00A84066 /* AccessoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetailsViewController.swift; sourceTree = "<group>"; };
+		C4A1A9902791325E00A84066 /* AccessoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryDetailsViewController.xib; sourceTree = "<group>"; };
 		C4A3E721279010C20093EA66 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		C4A3E7242790463F0093EA66 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,7 +170,9 @@
 		C404DB66278ACB570039575D /* Nomenclatura */ = {
 			isa = PBXGroup;
 			children = (
-				C448C3D7278EA8130011BEA4 /* nomenclaturaDetails */,
+				C4A1A98E2791324800A84066 /* AccessoryDetails */,
+				C4A1A98D279131C200A84066 /* MaterialDetails */,
+				C448C3D7278EA8130011BEA4 /* manufacProdDetails */,
 				C493750B278702E800DFD42A /* nomenclatureViewController.xib */,
 				C493750A278702E800DFD42A /* nomenclatureViewController.swift */,
 				C404DB67278ACB670039575D /* tableFiles */,
@@ -179,13 +189,13 @@
 			path = tableFiles;
 			sourceTree = "<group>";
 		};
-		C448C3D7278EA8130011BEA4 /* nomenclaturaDetails */ = {
+		C448C3D7278EA8130011BEA4 /* manufacProdDetails */ = {
 			isa = PBXGroup;
 			children = (
 				C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */,
 				C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */,
 			);
-			path = nomenclaturaDetails;
+			path = manufacProdDetails;
 			sourceTree = "<group>";
 		};
 		C482471E278B044900B09424 /* Network */ = {
@@ -262,6 +272,24 @@
 				C4937508278550A800DFD42A /* OrangeButton.swift */,
 			);
 			path = misc;
+			sourceTree = "<group>";
+		};
+		C4A1A98D279131C200A84066 /* MaterialDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C4A1A98A27911CEF00A84066 /* DetailsViewController.xib */,
+				C4A1A98927911CEF00A84066 /* DetailsViewController.swift */,
+			);
+			path = MaterialDetails;
+			sourceTree = "<group>";
+		};
+		C4A1A98E2791324800A84066 /* AccessoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C4A1A98F2791325E00A84066 /* AccessoryDetailsViewController.swift */,
+				C4A1A9902791325E00A84066 /* AccessoryDetailsViewController.xib */,
+			);
+			path = AccessoryDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +405,7 @@
 				C404DB61278ABCD40039575D /* OrdersTableViewCell.xib in Resources */,
 				C4790C46278879B800C9D60A /* OrdersViewController.xib in Resources */,
 				C493750627854DB600DFD42A /* LoginViewController.xib in Resources */,
+				C4A1A9922791325E00A84066 /* AccessoryDetailsViewController.xib in Resources */,
 				C4790C4A278879CD00C9D60A /* ProfileViewController.xib in Resources */,
 				C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */,
 				C4790C4E27887C6600C9D60A /* TabbarViewController.xib in Resources */,
@@ -385,6 +414,7 @@
 				C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */,
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
 				C49374D527854BE100DFD42A /* Main.storyboard in Resources */,
+				C4A1A98C27911CF000A84066 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +443,7 @@
 				C49374D827854BE100DFD42A /* factory_manager_ios.xcdatamodeld in Sources */,
 				C4937509278550A900DFD42A /* OrangeButton.swift in Sources */,
 				C4A3E722279010C20093EA66 /* extension.swift in Sources */,
+				C4A1A9912791325E00A84066 /* AccessoryDetailsViewController.swift in Sources */,
 				C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */,
 				C4790C4D27887C6600C9D60A /* TabbarViewController.swift in Sources */,
 				C4790C45278879B800C9D60A /* OrdersViewController.swift in Sources */,
@@ -428,6 +459,7 @@
 				C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */,
 				C4824727278B224600B09424 /* CoreDataManager.swift in Sources */,
 				C4824722278B05AD00B09424 /* Models.swift in Sources */,
+				C4A1A98B27911CEF00A84066 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

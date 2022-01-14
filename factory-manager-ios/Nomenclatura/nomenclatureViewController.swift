@@ -65,8 +65,32 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         }  else if selectedCategoryIndex == 0 {
             upcastedCell.bindProduct(productData![indexPath.row])
         }
-        print("good")
+
         return upcastedCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if selectedCategoryIndex == 0 {
+        
+        let detailsVc = NomenclaturaDetailsViewController(nibName: "NomenclaturaDetailsViewController", bundle: nil)
+        
+        let modelData = self.productData?[indexPath.row]
+        detailsVc.model = modelData
+        
+        navigationController?.pushViewController(detailsVc, animated: true)
+        } else if selectedCategoryIndex == 1 {
+            let vc = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+            let modelData = self.clothData?[indexPath.row]
+            vc.model = modelData
+            
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = AccessoryDetailsViewController(nibName: "AccessoryDetailsViewController", bundle: nil)
+            let modelData = self.accessoryData?[indexPath.row]
+            vc.model = modelData
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
         
     
@@ -86,17 +110,23 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         UILabel.appearance(whenContainedInInstancesOf: [UISegmentedControl.self]).numberOfLines = 0
         commonInit()
-        self.navigationController?.isNavigationBarHidden = true
         
         self.nomenclatureList.reloadData()
     }
 
     
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        
         DispatchQueue.main.async {
             
-        
         NetworkManager.cloth() { responseObjectsArray in
             self.clothData = responseObjectsArray
         }
@@ -109,7 +139,6 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
             self.productData = responseObjectsArray
         }
         }
-        
         
     }
     
