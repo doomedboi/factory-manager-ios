@@ -78,6 +78,7 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         detailsVc.model = modelData
         
         navigationController?.pushViewController(detailsVc, animated: true)
+            
         } else if selectedCategoryIndex == 1 {
             let vc = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
             let modelData = self.clothData?[indexPath.row]
@@ -97,6 +98,7 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
     private func fetchDataFromServer() {
         //NetworkManager.cloth()
     }
+    
     
     @IBOutlet weak var nomenclatureList: UITableView!
     @IBOutlet weak var segmentControll: UISegmentedControl!
@@ -147,7 +149,9 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         guard target == self.segmentControll else { return }
         
         self.selectedCategoryIndex = target.selectedSegmentIndex
-        self.nomenclatureList.reloadData()
+        DispatchQueue.main.async {
+            self.nomenclatureList.reloadData()
+        }
     }
     
     private func commonInit() {

@@ -40,7 +40,7 @@ class OrdersTableViewCell: UITableViewCell {
     }
     
     func bind(_ model: OrderModel) {
-        numberLabel.text = String(model.id!)
+        numberLabel.text = String(describing: model.id!)
         customerLabel.text = model.customer.name
         statusLabel.text = orderStages[model.stage!]
     }

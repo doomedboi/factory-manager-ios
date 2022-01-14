@@ -24,6 +24,8 @@
 		C4824722278B05AD00B09424 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4824721278B05AD00B09424 /* Models.swift */; };
 		C4824724278B1C3900B09424 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4824723278B1C3800B09424 /* NetworkManager.swift */; };
 		C4824727278B224600B09424 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4824726278B224600B09424 /* CoreDataManager.swift */; };
+		C48CBCC927914F25001A365F /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48CBCC727914F25001A365F /* OrderDetailViewController.swift */; };
+		C48CBCCA27914F25001A365F /* OrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48CBCC827914F25001A365F /* OrderDetailViewController.xib */; };
 		C49374CE27854BE000DFD42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374CD27854BE000DFD42A /* AppDelegate.swift */; };
 		C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374CF27854BE000DFD42A /* SceneDelegate.swift */; };
 		C49374D227854BE000DFD42A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49374D127854BE000DFD42A /* ViewController.swift */; };
@@ -78,6 +80,8 @@
 		C4824721278B05AD00B09424 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C4824723278B1C3800B09424 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C4824726278B224600B09424 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C48CBCC727914F25001A365F /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		C48CBCC827914F25001A365F /* OrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailViewController.xib; sourceTree = "<group>"; };
 		C49374CA27854BE000DFD42A /* factory-manager-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "factory-manager-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49374CD27854BE000DFD42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49374CF27854BE000DFD42A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		C404DB63278ACAE00039575D /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				C48CBCC627914F0A001A365F /* OrderDetails */,
 				C4790C44278879B800C9D60A /* OrdersViewController.xib */,
 				C4790C43278879B800C9D60A /* OrdersViewController.swift */,
 				C404DB65278ACB2B0039575D /* tableFiles */,
@@ -214,6 +219,15 @@
 				C4824726278B224600B09424 /* CoreDataManager.swift */,
 			);
 			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		C48CBCC627914F0A001A365F /* OrderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C48CBCC727914F25001A365F /* OrderDetailViewController.swift */,
+				C48CBCC827914F25001A365F /* OrderDetailViewController.xib */,
+			);
+			path = OrderDetails;
 			sourceTree = "<group>";
 		};
 		C49374C127854BE000DFD42A = {
@@ -410,6 +424,7 @@
 				C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */,
 				C4790C4E27887C6600C9D60A /* TabbarViewController.xib in Resources */,
 				C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */,
+				C48CBCCA27914F25001A365F /* OrderDetailViewController.xib in Resources */,
 				C49374DD27854BE300DFD42A /* LaunchScreen.storyboard in Resources */,
 				C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */,
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
@@ -443,6 +458,7 @@
 				C49374D827854BE100DFD42A /* factory_manager_ios.xcdatamodeld in Sources */,
 				C4937509278550A900DFD42A /* OrangeButton.swift in Sources */,
 				C4A3E722279010C20093EA66 /* extension.swift in Sources */,
+				C48CBCC927914F25001A365F /* OrderDetailViewController.swift in Sources */,
 				C4A1A9912791325E00A84066 /* AccessoryDetailsViewController.swift in Sources */,
 				C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */,
 				C4790C4D27887C6600C9D60A /* TabbarViewController.swift in Sources */,
