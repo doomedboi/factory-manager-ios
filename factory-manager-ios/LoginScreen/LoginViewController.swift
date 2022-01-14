@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var topLabelConstr: NSLayoutConstraint!
     
@@ -30,8 +30,15 @@ class LoginViewController: UIViewController {
         print(multiplayer)
         welcomeTitle.font = welcomeTitle.font.withSize(UIScreen.main.bounds.height * multiplayer)
         
+        self.loginTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        loginTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
 
     @IBAction func didLoginBtnTap(_ sender: Any) {
         let login = loginTextField.text ?? ""

@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0q-hW-hHM">
-                    <rect key="frame" x="123" y="280" width="151" height="47"/>
+                    <rect key="frame" x="120" y="280" width="174" height="47"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -76,9 +76,9 @@
                 <constraint firstItem="Z0q-hW-hHM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="236" id="ayF-cP-gm0"/>
                 <constraint firstItem="KCt-Zc-37d" firstAttribute="top" secondItem="d20-Ex-JuH" secondAttribute="bottom" constant="32" id="dUl-Mx-TCT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p1W-2H-vAf" secondAttribute="trailing" constant="16" id="ekM-ay-oTj"/>
-                <constraint firstItem="Z0q-hW-hHM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="123" id="ln8-4j-lzY"/>
+                <constraint firstItem="Z0q-hW-hHM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="120" id="ln8-4j-lzY"/>
                 <constraint firstItem="p1W-2H-vAf" firstAttribute="top" secondItem="Z0q-hW-hHM" secondAttribute="bottom" constant="60" id="s5s-Wr-obr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z0q-hW-hHM" secondAttribute="trailing" constant="140" id="tPq-ge-WfU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Z0q-hW-hHM" secondAttribute="trailing" constant="120" id="tPq-ge-WfU"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
         </view>
