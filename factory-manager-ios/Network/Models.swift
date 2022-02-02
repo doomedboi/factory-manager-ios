@@ -47,6 +47,7 @@ struct AccessoryModel: Decodable {
     let weight: Float
     let image: String
     let price: Float
+    let kgAcceptable: Bool
 }
 
 struct ProductModel: Decodable {
