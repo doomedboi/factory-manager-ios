@@ -29,7 +29,7 @@ class NomenclaturaTableViewCell: UITableViewCell {
         self.backgroundColor = .clear
         self.selectionStyle = .none
         
-        designView.backgroundColor = .orange
+        designView.backgroundColor = .white
         designView.layer.masksToBounds = true
         
     }
@@ -39,7 +39,7 @@ class NomenclaturaTableViewCell: UITableViewCell {
           //set the values for top,left,bottom,right margins
           let margins = UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8)
           contentView.frame = contentView.frame.inset(by: margins)
-          contentView.layer.cornerRadius = 8
+          contentView.layer.cornerRadius = 4
     }
     
     
@@ -54,7 +54,7 @@ class NomenclaturaTableViewCell: UITableViewCell {
         articleLabel.text = article
         
         //  image routine
-        var baseUrl = "http://109.196.164.54/"
+        var baseUrl = "https://sewing.mrfox131.software/"
         baseUrl += imagePath
         guard let downloadUrl = URL(string: baseUrl) else { return }
         

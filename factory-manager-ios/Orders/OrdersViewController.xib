@@ -3,13 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdersViewController" customModule="factory_manager_ios" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="alE-cU-HHp" id="mHw-wh-thv"/>
                 <outlet property="ordersTable" destination="epx-oG-ina" id="qWe-OO-Pe0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,25 +20,37 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="99" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="epx-oG-ina">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alE-cU-HHp">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="99" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="epx-oG-ina">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <color key="backgroundColor" name="backgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" name="backgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="epx-oG-ina" firstAttribute="leading" secondItem="alE-cU-HHp" secondAttribute="leading" id="Gi5-GQ-SQ8"/>
+                        <constraint firstAttribute="bottom" secondItem="epx-oG-ina" secondAttribute="bottom" id="XhZ-pK-KlN"/>
+                        <constraint firstAttribute="trailing" secondItem="epx-oG-ina" secondAttribute="trailing" id="Y2u-KP-bsc"/>
+                        <constraint firstItem="epx-oG-ina" firstAttribute="top" secondItem="alE-cU-HHp" secondAttribute="top" id="sqF-c6-pdS"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="epx-oG-ina" secondAttribute="bottom" id="Els-Vy-2Bx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="epx-oG-ina" secondAttribute="trailing" id="PJD-Wg-xUv"/>
-                <constraint firstItem="epx-oG-ina" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="du7-Y2-HP5"/>
-                <constraint firstItem="epx-oG-ina" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kNR-PH-xGG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="alE-cU-HHp" secondAttribute="bottom" id="CDX-IK-Wkk"/>
+                <constraint firstItem="alE-cU-HHp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ScG-UN-XKP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="alE-cU-HHp" secondAttribute="trailing" id="Yhn-Xh-oRE"/>
+                <constraint firstItem="alE-cU-HHp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hyv-HZ-Zbo"/>
             </constraints>
             <point key="canvasLocation" x="139" y="88"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="backgroundColor">
+            <color red="0.019607843137254902" green="0.49019607843137253" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

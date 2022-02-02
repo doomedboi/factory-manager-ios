@@ -20,7 +20,7 @@ class OrdersTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         self.backgroundColor = .clear
         
-        designView.backgroundColor = .orange
+        designView.backgroundColor = .white
         designView.layer.masksToBounds = true
     }
 

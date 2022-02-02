@@ -63,7 +63,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         }
                     } onError: { err in
                         DispatchQueue.main.async {
-                            //NetworkHelper.getApiErrors(errors: err.errors)
+                            NetworkHelper.getApiErrors(errors: err.errors)
                         }
                     }
                 } catch {

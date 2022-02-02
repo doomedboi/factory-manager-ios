@@ -36,7 +36,7 @@ extension NetworkManager {
     static func login(_ body: Data,
                           completion: @escaping ((userLoginRequstModel) -> Void),
                           onError :@escaping((ApiError) -> Void)) {
-        guard let url = URL(string: "http://109.196.164.54/api/v1/plane_login") else {
+        guard let url = URL(string: "https://Sewing.mrfox131.software/api/v1/plane_login") else {
             print("error with url")
             return
         }
@@ -87,7 +87,7 @@ extension NetworkManager {
     }
     
     static func me(completion: @escaping ((userModel) -> Void)) {
-        let components = URLComponents(string: "http://109.196.164.54/api/v1/me")!
+        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/me")!
         
         var request = URLRequest(url: components.url!)
 
@@ -117,7 +117,7 @@ extension NetworkManager {
     }
     
     static func cloth(complition: @escaping ([ClothModel])->(Void)) {
-        let components = URLComponents(string: "http://109.196.164.54/api/v1/cloth")!
+        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/cloth")!
         
         var request = URLRequest(url: components.url!)
 
@@ -145,7 +145,7 @@ extension NetworkManager {
     }
     
     static func accessory(complition: @escaping ([AccessoryModel])->(Void)) {
-        let components = URLComponents(string: "http://109.196.164.54/api/v1/accessory")!
+        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/accessory")!
         
         var request = URLRequest(url: components.url!)
 
@@ -175,7 +175,7 @@ extension NetworkManager {
     
     
     static func product(complition: @escaping ([ProductModel])->(Void)) {
-        let components = URLComponents(string: "http://109.196.164.54/api/v1/product")!
+        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/product")!
         
         var request = URLRequest(url: components.url!)
 
@@ -206,7 +206,7 @@ extension NetworkManager {
     
     
     static func order(complition: @escaping ([OrderModel])->(Void)) {
-        let components = URLComponents(string: "http://109.196.164.54/api/v1/order")!
+        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/order")!
         
         var request = URLRequest(url: components.url!)
 
@@ -232,6 +232,37 @@ extension NetworkManager {
             
         }
         task.resume()
+    }
+    
+    static func getPreviousProducts(article: Int, complition: @escaping ([ProductModel])-> (Void)) {
+        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/product/\(article)/previous")!
+        
+        var request = URLRequest(url: components.url!)
+
+        var headerPayload = "Bearer "
+        headerPayload += CoreDataManager.shared.userToken!
+        
+        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let data = data,
+                  let response = response as? HTTPURLResponse else {
+                return
+            }
+            
+            do {
+                let castedData = try NetworkManager.decoder.decode([ProductModel].self, from: data)
+                complition(castedData)
+                print("DATA:")
+                print(castedData)
+            } catch(let e) {
+                print("decode err: \(e)")
+            }
+            
+        }
+        task.resume()
+        
     }
     
 }

@@ -9,7 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var lastNameLabel: UILabel!
+    
+    @IBOutlet weak var lastName: UILabel!
     
     @IBOutlet weak var middleNameLabel: UILabel!
     
@@ -36,10 +37,12 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         NetworkManager.me() { responseObject in
         
             let splitName: [String] = responseObject.name.components(separatedBy: " ")
             print(splitName)
+            print("=====")
             
             let namesCount = splitName.count
             if namesCount == 0 {
@@ -48,7 +51,7 @@ class ProfileViewController: UIViewController {
             
             //  unpack data
             DispatchQueue.main.async {
-            self.lastNameLabel.text = splitName[0] ?? ""
+            self.lastName.text = splitName[0] ?? ""
             self.middleNameLabel.text = namesCount > 1 ? splitName[1] : ""
             self.firstNameLabel.text =  namesCount > 2 ? splitName[2] : ""
                 self.typeOfAccountLabel.text = self.roles[ responseObject.role]
@@ -65,8 +68,12 @@ class ProfileViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var contentView: UIView!
+    
     private func selfInit() {
         self.title = "Профиль"
+        self.contentView.backgroundColor = UIColor(named: "backgroundColor")
+        
     }
 
 }

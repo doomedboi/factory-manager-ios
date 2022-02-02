@@ -13,6 +13,10 @@
 		C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */; };
 		C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */; };
 		C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */; };
+		C461E52A27A83DA800AAA300 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E52827A83DA800AAA300 /* ItemsTableViewCell.swift */; };
+		C461E52B27A83DA800AAA300 /* ItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C461E52927A83DA800AAA300 /* ItemsTableViewCell.xib */; };
+		C461E52F27A8F79900AAA300 /* ChangesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E52D27A8F79900AAA300 /* ChangesTableViewCell.swift */; };
+		C461E53027A8F79900AAA300 /* ChangesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C461E52E27A8F79900AAA300 /* ChangesTableViewCell.xib */; };
 		C469C5EA2790552100843E52 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C469C5E92790552100843E52 /* SDWebImage */; };
 		C4790C45278879B800C9D60A /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4790C43278879B800C9D60A /* OrdersViewController.swift */; };
 		C4790C46278879B800C9D60A /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4790C44278879B800C9D60A /* OrdersViewController.xib */; };
@@ -20,6 +24,10 @@
 		C4790C4A278879CD00C9D60A /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4790C48278879CD00C9D60A /* ProfileViewController.xib */; };
 		C4790C4D27887C6600C9D60A /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4790C4B27887C6600C9D60A /* TabbarViewController.swift */; };
 		C4790C4E27887C6600C9D60A /* TabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4790C4C27887C6600C9D60A /* TabbarViewController.xib */; };
+		C48072A427AA85850048AC28 /* ItemDescriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48072A227AA85850048AC28 /* ItemDescriptionViewCell.swift */; };
+		C48072A527AA85850048AC28 /* ItemDescriptionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48072A327AA85850048AC28 /* ItemDescriptionViewCell.xib */; };
+		C48072A827AA98B10048AC28 /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48072A627AA98B10048AC28 /* HistoryViewCell.swift */; };
+		C48072A927AA98B10048AC28 /* HistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48072A727AA98B10048AC28 /* HistoryViewCell.xib */; };
 		C4824720278B046900B09424 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C482471F278B046900B09424 /* helpers.swift */; };
 		C4824722278B05AD00B09424 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4824721278B05AD00B09424 /* Models.swift */; };
 		C4824724278B1C3900B09424 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4824723278B1C3800B09424 /* NetworkManager.swift */; };
@@ -70,12 +78,20 @@
 		C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaTableViewCell.xib; sourceTree = "<group>"; };
 		C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaDetailsViewController.swift; sourceTree = "<group>"; };
 		C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaDetailsViewController.xib; sourceTree = "<group>"; };
+		C461E52827A83DA800AAA300 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
+		C461E52927A83DA800AAA300 /* ItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewCell.xib; sourceTree = "<group>"; };
+		C461E52D27A8F79900AAA300 /* ChangesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangesTableViewCell.swift; sourceTree = "<group>"; };
+		C461E52E27A8F79900AAA300 /* ChangesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangesTableViewCell.xib; sourceTree = "<group>"; };
 		C4790C43278879B800C9D60A /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		C4790C44278879B800C9D60A /* OrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
 		C4790C47278879CD00C9D60A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C4790C48278879CD00C9D60A /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		C4790C4B27887C6600C9D60A /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		C4790C4C27887C6600C9D60A /* TabbarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarViewController.xib; sourceTree = "<group>"; };
+		C48072A227AA85850048AC28 /* ItemDescriptionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDescriptionViewCell.swift; sourceTree = "<group>"; };
+		C48072A327AA85850048AC28 /* ItemDescriptionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDescriptionViewCell.xib; sourceTree = "<group>"; };
+		C48072A627AA98B10048AC28 /* HistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewCell.swift; sourceTree = "<group>"; };
+		C48072A727AA98B10048AC28 /* HistoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewCell.xib; sourceTree = "<group>"; };
 		C482471F278B046900B09424 /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		C4824721278B05AD00B09424 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C4824723278B1C3800B09424 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -197,10 +213,24 @@
 		C448C3D7278EA8130011BEA4 /* manufacProdDetails */ = {
 			isa = PBXGroup;
 			children = (
+				C461E52C27A8F77700AAA300 /* tableFiles */,
 				C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */,
 				C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */,
 			);
 			path = manufacProdDetails;
+			sourceTree = "<group>";
+		};
+		C461E52C27A8F77700AAA300 /* tableFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C461E52D27A8F79900AAA300 /* ChangesTableViewCell.swift */,
+				C461E52E27A8F79900AAA300 /* ChangesTableViewCell.xib */,
+				C48072A227AA85850048AC28 /* ItemDescriptionViewCell.swift */,
+				C48072A327AA85850048AC28 /* ItemDescriptionViewCell.xib */,
+				C48072A627AA98B10048AC28 /* HistoryViewCell.swift */,
+				C48072A727AA98B10048AC28 /* HistoryViewCell.xib */,
+			);
+			path = tableFiles;
 			sourceTree = "<group>";
 		};
 		C482471E278B044900B09424 /* Network */ = {
@@ -226,6 +256,8 @@
 			children = (
 				C48CBCC727914F25001A365F /* OrderDetailViewController.swift */,
 				C48CBCC827914F25001A365F /* OrderDetailViewController.xib */,
+				C461E52827A83DA800AAA300 /* ItemsTableViewCell.swift */,
+				C461E52927A83DA800AAA300 /* ItemsTableViewCell.xib */,
 			);
 			path = OrderDetails;
 			sourceTree = "<group>";
@@ -421,6 +453,7 @@
 				C493750627854DB600DFD42A /* LoginViewController.xib in Resources */,
 				C4A1A9922791325E00A84066 /* AccessoryDetailsViewController.xib in Resources */,
 				C4790C4A278879CD00C9D60A /* ProfileViewController.xib in Resources */,
+				C461E53027A8F79900AAA300 /* ChangesTableViewCell.xib in Resources */,
 				C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */,
 				C4790C4E27887C6600C9D60A /* TabbarViewController.xib in Resources */,
 				C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */,
@@ -430,6 +463,9 @@
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
 				C49374D527854BE100DFD42A /* Main.storyboard in Resources */,
 				C4A1A98C27911CF000A84066 /* DetailsViewController.xib in Resources */,
+				C48072A527AA85850048AC28 /* ItemDescriptionViewCell.xib in Resources */,
+				C461E52B27A83DA800AAA300 /* ItemsTableViewCell.xib in Resources */,
+				C48072A927AA98B10048AC28 /* HistoryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,9 +499,12 @@
 				C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */,
 				C4790C4D27887C6600C9D60A /* TabbarViewController.swift in Sources */,
 				C4790C45278879B800C9D60A /* OrdersViewController.swift in Sources */,
+				C461E52F27A8F79900AAA300 /* ChangesTableViewCell.swift in Sources */,
 				C49374D227854BE000DFD42A /* ViewController.swift in Sources */,
 				C4790C49278879CD00C9D60A /* ProfileViewController.swift in Sources */,
 				C49374CE27854BE000DFD42A /* AppDelegate.swift in Sources */,
+				C48072A827AA98B10048AC28 /* HistoryViewCell.swift in Sources */,
+				C461E52A27A83DA800AAA300 /* ItemsTableViewCell.swift in Sources */,
 				C493750527854DB600DFD42A /* LoginViewController.swift in Sources */,
 				C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */,
 				C493750C278702E800DFD42A /* nomenclatureViewController.swift in Sources */,
@@ -473,6 +512,7 @@
 				C404DB60278ABCD40039575D /* OrdersTableViewCell.swift in Sources */,
 				C4824724278B1C3900B09424 /* NetworkManager.swift in Sources */,
 				C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */,
+				C48072A427AA85850048AC28 /* ItemDescriptionViewCell.swift in Sources */,
 				C4824727278B224600B09424 /* CoreDataManager.swift in Sources */,
 				C4824722278B05AD00B09424 /* Models.swift in Sources */,
 				C4A1A98B27911CEF00A84066 /* DetailsViewController.swift in Sources */,

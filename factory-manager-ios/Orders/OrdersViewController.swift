@@ -12,6 +12,7 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var ordersTable: UITableView!
     
+    @IBOutlet weak var contentView: UIView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -51,7 +52,7 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Orders"
+        navigationItem.title = "Заказы"
         tableInit()
     }
     
@@ -59,6 +60,7 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
         ordersTable.dataSource = self
         ordersTable.delegate = self
         ordersTable.register(UINib(nibName: "OrdersTableViewCell", bundle: nil), forCellReuseIdentifier: "OrdersTableViewCell")
+        self.contentView.backgroundColor = UIColor(named: "backgroundColor")
         
     }
     

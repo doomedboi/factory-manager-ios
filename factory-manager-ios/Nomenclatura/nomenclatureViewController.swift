@@ -75,7 +75,7 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
         let detailsVc = NomenclaturaDetailsViewController(nibName: "NomenclaturaDetailsViewController", bundle: nil)
         
         let modelData = self.productData?[indexPath.row]
-        detailsVc.model = modelData
+        detailsVc.localModal = modelData
         
         navigationController?.pushViewController(detailsVc, animated: true)
             
@@ -164,6 +164,8 @@ class nomenclatureViewController: UIViewController, UITableViewDataSource, UITab
     
         nomenclatureList.separatorStyle = .none
         nomenclatureList.backgroundColor = .clear
+        self.contentViews.backgroundColor = UIColor(named: "backgroundColor")
+        
     }
 
 }

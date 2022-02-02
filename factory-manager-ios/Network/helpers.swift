@@ -20,7 +20,7 @@ class NetworkHelper {
         return errorsString
     }
     
-    static func getFullImagePath(domain: String = "http://109.196.164.54/", localPath: String) -> URL? {
+    static func getFullImagePath(domain: String = "https://sewing.mrfox131.software/", localPath: String) -> URL? {
         return URL(string: domain + localPath)
     }
 }

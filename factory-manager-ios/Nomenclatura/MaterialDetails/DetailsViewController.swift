@@ -37,6 +37,7 @@ class DetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bind(model!)
+        print(model)
     }
     
     func bind(_ model: ClothModel) {

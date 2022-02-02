@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,8 +25,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qz-aH-hJN">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ufh-ON-mSU">
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ufh-ON-mSU">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="4UV-QD-ytQ"/>
                             </constraints>
@@ -36,19 +38,21 @@
                             </segments>
                         </segmentedControl>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="99" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1mH-ee-iqI">
-                            <rect key="frame" x="6" y="55" width="402" height="751"/>
+                            <rect key="frame" x="0.0" y="40" width="414" height="766"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="separatorColor" name="AccentColor"/>
+                            <color key="sectionIndexBackgroundColor" systemColor="labelColor"/>
                         </tableView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="1mH-ee-iqI" secondAttribute="trailing" constant="6" id="1O6-BW-sqp"/>
-                        <constraint firstAttribute="trailing" secondItem="Ufh-ON-mSU" secondAttribute="trailing" id="J1w-Fg-g0C"/>
-                        <constraint firstItem="Ufh-ON-mSU" firstAttribute="leading" secondItem="1qz-aH-hJN" secondAttribute="leading" id="MGy-e0-CE3"/>
+                        <constraint firstAttribute="trailing" secondItem="1mH-ee-iqI" secondAttribute="trailing" id="1O6-BW-sqp"/>
+                        <constraint firstItem="1mH-ee-iqI" firstAttribute="top" secondItem="Ufh-ON-mSU" secondAttribute="bottom" id="IEU-UH-aCp"/>
+                        <constraint firstAttribute="trailing" secondItem="Ufh-ON-mSU" secondAttribute="trailing" id="Ob3-UU-qga"/>
                         <constraint firstAttribute="bottom" secondItem="1mH-ee-iqI" secondAttribute="bottom" constant="12" id="W7u-jg-DZr"/>
-                        <constraint firstItem="Ufh-ON-mSU" firstAttribute="top" secondItem="1qz-aH-hJN" secondAttribute="top" id="c6W-DI-KE3"/>
-                        <constraint firstItem="1mH-ee-iqI" firstAttribute="top" secondItem="Ufh-ON-mSU" secondAttribute="bottom" constant="15" id="xnY-5Z-j22"/>
-                        <constraint firstItem="1mH-ee-iqI" firstAttribute="leading" secondItem="1qz-aH-hJN" secondAttribute="leading" constant="6" id="z5d-8V-J6v"/>
+                        <constraint firstItem="Ufh-ON-mSU" firstAttribute="leading" secondItem="1qz-aH-hJN" secondAttribute="leading" id="hmd-0j-b35"/>
+                        <constraint firstItem="Ufh-ON-mSU" firstAttribute="top" secondItem="1qz-aH-hJN" secondAttribute="top" id="wTR-Dy-cie"/>
+                        <constraint firstItem="1mH-ee-iqI" firstAttribute="leading" secondItem="1qz-aH-hJN" secondAttribute="leading" id="z5d-8V-J6v"/>
                     </constraints>
                 </view>
             </subviews>
@@ -64,6 +68,12 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
