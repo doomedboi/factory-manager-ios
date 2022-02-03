@@ -100,7 +100,7 @@ class NomenclaturaDetailsViewController: UIViewController {
 extension NomenclaturaDetailsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return previousStates.count + 2
+        return previousStates.count > 0 ? previousStates.count + 2 : previousStates.count + 1
     }
     
     
@@ -121,7 +121,8 @@ extension NomenclaturaDetailsViewController : UITableViewDataSource {
             return upcell
         }
         
-        let activityData = self.previousStates[indexPath.row-2]
+        let offset = self.previousStates.count > 0 ? -2 : 0
+        let activityData = self.previousStates[indexPath.row + offset]
         print("=====")
         print(activityData)
         

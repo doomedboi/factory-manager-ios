@@ -15,7 +15,12 @@ class NetworkManager {
     static let baseURL = "https://Sewing.mrfox131.software/api/v1"
     
     static let encoder = JSONEncoder()
-    static let decoder = JSONDecoder()
+    static let decoder: JSONDecoder = ({
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        return decoder
+    })()
     
     
     private init() {
@@ -55,7 +60,7 @@ class NetworkManager {
     
     static private func createPatchRequest(url: URL, body: Data? = nil) -> URLRequest {
         var req = createUrlRequest(urlObj: url)
-        
+    
         req.httpMethod = "PATCH"
         req.httpBody = body
         
@@ -267,8 +272,12 @@ extension NetworkManager {
     
     
     static func accessoryDecommission(article: Int, quanity: Int, complition: @escaping (Bool)-> (Void)) {
-        let url = URL(string: "/accessory/\(article)?quantity=\(quanity)")!
-        
+        print(article, quanity)
+        guard let url = URL(string: baseURL + "/accessory/\(article)?quantity=\(quanity)") else {
+            print("BAD URL")
+            return
+        }
+        print(url)
         let request = createPatchRequest(url: url, body: nil)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -287,6 +296,30 @@ extension NetworkManager {
         }
         task.resume()
         
+    }
+    
+    static func accessoryInKg(article: Int, amount: Double, complition: @escaping (Bool)-> (Void)) {
+        guard let url = URL(string: baseURL + "/accessory_in_kg/\(article)?amount=\(amount)") else {
+            return
+        }
+        
+        let request = createPatchRequest(url: url, body: nil)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+            print(response.statusCode)
+            if response.statusCode == 200 {
+                print("Succes")
+                complition(true)
+            } else {
+                complition(false)
+            }
+            
+        }
+        task.resume()
     }
     
     static func getClothByArticle(article: Int, complition: @escaping ([ClothArticleModel])->(Void)) {
@@ -336,5 +369,28 @@ extension NetworkManager {
         task.resume()
         
     }
+    
+    static func getAccessoryAmount(article: Int, complition: @escaping (accessoryAmountResponse)->(Void)) {
+        guard let url = URL(string: baseURL + "/accessory/\(article)") else { return }
+        
+        let request = createGetRequest(url: url, body: nil)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let data = data else { return }
+            
+            do {
+                let castedData = try NetworkManager.decoder.decode(accessoryAmountResponse.self, from: data)
+                complition(castedData)
+                print("DATA:")
+                print(castedData)
+            } catch(let e) {
+                print("decode err: \(e)")
+            }
+            
+        }
+        task.resume()
+    }
+
     
 }

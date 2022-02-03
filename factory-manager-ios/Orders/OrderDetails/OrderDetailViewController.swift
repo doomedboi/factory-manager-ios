@@ -24,7 +24,7 @@ class OrderDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title =  String(describing: model?.id)
+        self.title =  "Заказ номер \(model?.id ?? 0)"
         
         self.itemsTable.delegate = self
         self.itemsTable.dataSource = self

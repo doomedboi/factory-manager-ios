@@ -47,7 +47,7 @@ struct AccessoryModel: Decodable {
     let weight: Float
     let image: String
     let price: Float
-    let kg_acceptable: Bool
+    let kgAcceptable: Bool
 }
 
 struct AccessoryDecommission: Encodable {
@@ -67,7 +67,13 @@ struct ProductModel: Decodable {
     let size: Int
     let clothes: [ClothModel]
     let accessories: [AccessoryModel]
+    let changedDate: String?
     let previous: Int?
+}
+
+struct accessoryAmountResponse: Decodable {
+    let article: Int
+    let amount: Int?
 }
 
 struct ProductsContainerModel: Decodable {
@@ -76,8 +82,8 @@ struct ProductsContainerModel: Decodable {
 
 struct OrderModel: Decodable {
     let id: Int?
-    let creation_date: String
-    let completion_date: String?
+    let creationDate: String
+    let completionDate: String?
     let stage: Int?
     let manager: userModel
     let customer: userModel
