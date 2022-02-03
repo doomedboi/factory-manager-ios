@@ -80,6 +80,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="Lenght" destination="EgG-GU-43G" id="75v-19-Vqh"/>
+                <outlet property="amountTextFiled" destination="4E7-16-6NF" id="H7J-Zv-mIL"/>
                 <outlet property="numberLabel" destination="orf-EN-oT0" id="8jI-nE-l1Z"/>
             </connections>
             <point key="canvasLocation" x="139" y="76"/>

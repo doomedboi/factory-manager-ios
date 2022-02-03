@@ -9,6 +9,16 @@ import UIKit
 
 class MaterialDescriptionViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var articleLabel: UILabel!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var sostavLabel: UILabel!
+    @IBOutlet weak var widthLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +28,14 @@ class MaterialDescriptionViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func bind(model: ClothModel) {
+        self.articleLabel.text = String(describing: model.article)
+        self.colorLabel.text = model.color
+        self.sostavLabel.text = model.composition
+        self.widthLabel.text = String(describing: model.width)
+        self.priceLabel.text = String(describing: model.price)
     }
     
 }

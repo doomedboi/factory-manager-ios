@@ -289,4 +289,52 @@ extension NetworkManager {
         
     }
     
+    static func getClothByArticle(article: Int, complition: @escaping ([ClothArticleModel])->(Void)) {
+        guard let url = URL(string: baseURL + "/cloth/\(article)") else { return }
+        
+        let request = createGetRequest(url: url, body: nil)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let data = data else { return }
+            
+            do {
+                let castedData = try NetworkManager.decoder.decode([ClothArticleModel].self, from: data)
+                complition(castedData)
+                print("DATA:")
+                print(castedData)
+            } catch(let e) {
+                print("decode err: \(e)")
+            }
+            
+        }
+        task.resume()
+        
+    }
+    
+    static func clothDecommission(article: Int, number: Int, length: Double, complition: @escaping (Bool)->(Void)) {
+        guard let url = URL(string: baseURL + "/cloth/\(article)/\(number)?length=\(length)") else {
+            return
+        }
+        
+        let request = createPatchRequest(url: url, body: nil)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+            print(response.statusCode)
+            if response.statusCode == 200 {
+                print("Succes")
+                complition(true)
+            } else {
+                complition(false)
+            }
+            
+        }
+        task.resume()
+        
+    }
+    
 }

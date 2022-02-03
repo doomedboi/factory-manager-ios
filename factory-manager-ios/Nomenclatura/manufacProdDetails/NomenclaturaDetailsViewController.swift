@@ -56,9 +56,10 @@ class NomenclaturaDetailsViewController: UIViewController {
         bind(localModal!)
         
         let itemArticle = localModal?.article ?? 0
+        let itemSize = localModal?.size ?? 0
         
         DispatchQueue.main.async {
-            NetworkManager.getPreviousProducts(article: itemArticle, complition:  { objects in
+            NetworkManager.getPreviousProducts(article: itemArticle, size: itemSize, complition:  { objects in
                 print("OBJECTS IN CALLBACK")
                 print(objects)
                 self.previousStates = objects

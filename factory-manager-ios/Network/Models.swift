@@ -86,8 +86,8 @@ struct OrderModel: Decodable {
 }
 
 
-struct ClothArticleModel {
+struct ClothArticleModel: Decodable {
     let number: Int
-    let article: String
+    let article: Int
     let length: Double
 }
