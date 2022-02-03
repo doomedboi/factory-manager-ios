@@ -11,6 +11,10 @@
 		C404DB61278ABCD40039575D /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C404DB5F278ABCD40039575D /* OrdersTableViewCell.xib */; };
 		C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */; };
 		C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */; };
+		C447E31827AACCB900D3A5AC /* MaterialDescriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C447E31627AACCB900D3A5AC /* MaterialDescriptionViewCell.swift */; };
+		C447E31927AACCB900D3A5AC /* MaterialDescriptionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C447E31727AACCB900D3A5AC /* MaterialDescriptionViewCell.xib */; };
+		C447E31C27AACCDC00D3A5AC /* RulonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C447E31A27AACCDC00D3A5AC /* RulonsViewCell.swift */; };
+		C447E31D27AACCDC00D3A5AC /* RulonsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C447E31B27AACCDC00D3A5AC /* RulonsViewCell.xib */; };
 		C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */; };
 		C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */; };
 		C461E52A27A83DA800AAA300 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E52827A83DA800AAA300 /* ItemsTableViewCell.swift */; };
@@ -76,6 +80,10 @@
 		C404DB5F278ABCD40039575D /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
 		C426084E2787F8FE00B99A76 /* NomenclaturaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaTableViewCell.swift; sourceTree = "<group>"; };
 		C426084F2787F8FE00B99A76 /* NomenclaturaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaTableViewCell.xib; sourceTree = "<group>"; };
+		C447E31627AACCB900D3A5AC /* MaterialDescriptionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialDescriptionViewCell.swift; sourceTree = "<group>"; };
+		C447E31727AACCB900D3A5AC /* MaterialDescriptionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialDescriptionViewCell.xib; sourceTree = "<group>"; };
+		C447E31A27AACCDC00D3A5AC /* RulonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulonsViewCell.swift; sourceTree = "<group>"; };
+		C447E31B27AACCDC00D3A5AC /* RulonsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulonsViewCell.xib; sourceTree = "<group>"; };
 		C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaDetailsViewController.swift; sourceTree = "<group>"; };
 		C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaDetailsViewController.xib; sourceTree = "<group>"; };
 		C461E52827A83DA800AAA300 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +218,17 @@
 			path = tableFiles;
 			sourceTree = "<group>";
 		};
+		C447E31527AACC8E00D3A5AC /* TableFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C447E31627AACCB900D3A5AC /* MaterialDescriptionViewCell.swift */,
+				C447E31727AACCB900D3A5AC /* MaterialDescriptionViewCell.xib */,
+				C447E31A27AACCDC00D3A5AC /* RulonsViewCell.swift */,
+				C447E31B27AACCDC00D3A5AC /* RulonsViewCell.xib */,
+			);
+			path = TableFiles;
+			sourceTree = "<group>";
+		};
 		C448C3D7278EA8130011BEA4 /* manufacProdDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +342,7 @@
 		C4A1A98D279131C200A84066 /* MaterialDetails */ = {
 			isa = PBXGroup;
 			children = (
+				C447E31527AACC8E00D3A5AC /* TableFiles */,
 				C4A1A98A27911CEF00A84066 /* DetailsViewController.xib */,
 				C4A1A98927911CEF00A84066 /* DetailsViewController.swift */,
 			);
@@ -457,12 +477,14 @@
 				C493750D278702E800DFD42A /* nomenclatureViewController.xib in Resources */,
 				C4790C4E27887C6600C9D60A /* TabbarViewController.xib in Resources */,
 				C42608512787F8FE00B99A76 /* NomenclaturaTableViewCell.xib in Resources */,
+				C447E31D27AACCDC00D3A5AC /* RulonsViewCell.xib in Resources */,
 				C48CBCCA27914F25001A365F /* OrderDetailViewController.xib in Resources */,
 				C49374DD27854BE300DFD42A /* LaunchScreen.storyboard in Resources */,
 				C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */,
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
 				C49374D527854BE100DFD42A /* Main.storyboard in Resources */,
 				C4A1A98C27911CF000A84066 /* DetailsViewController.xib in Resources */,
+				C447E31927AACCB900D3A5AC /* MaterialDescriptionViewCell.xib in Resources */,
 				C48072A527AA85850048AC28 /* ItemDescriptionViewCell.xib in Resources */,
 				C461E52B27A83DA800AAA300 /* ItemsTableViewCell.xib in Resources */,
 				C48072A927AA98B10048AC28 /* HistoryViewCell.xib in Resources */,
@@ -491,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4824720278B046900B09424 /* helpers.swift in Sources */,
+				C447E31C27AACCDC00D3A5AC /* RulonsViewCell.swift in Sources */,
 				C49374D827854BE100DFD42A /* factory_manager_ios.xcdatamodeld in Sources */,
 				C4937509278550A900DFD42A /* OrangeButton.swift in Sources */,
 				C4A3E722279010C20093EA66 /* extension.swift in Sources */,
@@ -512,6 +535,7 @@
 				C404DB60278ABCD40039575D /* OrdersTableViewCell.swift in Sources */,
 				C4824724278B1C3900B09424 /* NetworkManager.swift in Sources */,
 				C42608502787F8FE00B99A76 /* NomenclaturaTableViewCell.swift in Sources */,
+				C447E31827AACCB900D3A5AC /* MaterialDescriptionViewCell.swift in Sources */,
 				C48072A427AA85850048AC28 /* ItemDescriptionViewCell.swift in Sources */,
 				C4824727278B224600B09424 /* CoreDataManager.swift in Sources */,
 				C4824722278B05AD00B09424 /* Models.swift in Sources */,

@@ -1,17 +1,14 @@
 //
-//  HistoryViewCell.swift
+//  MaterialDescriptionViewCell.swift
 //  factory-manager-ios
 //
-//  Created by soFuckingHot on 02.02.2022.
+//  Created by soFuckingHot on 03.02.2022.
 //
 
 import UIKit
 
-class HistoryViewCell: UITableViewCell {
+class MaterialDescriptionViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,10 +18,6 @@ class HistoryViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    func bind(_ title: String) {
-        self.titleLabel.text = title
     }
     
 }

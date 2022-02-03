@@ -34,6 +34,7 @@ class NomenclaturaDetailsViewController: UIViewController {
     
     func initTable() {
         listOfChanges.dataSource = self
+        listOfChanges.delegate = self
         listOfChanges.register(UINib(nibName: "ChangesTableViewCell", bundle: nil), forCellReuseIdentifier: "ChangesTableViewCell")
         listOfChanges.register(UINib(nibName: "ItemDescriptionViewCell", bundle: nil), forCellReuseIdentifier: "ItemDescriptionViewCell")
         listOfChanges.register(UINib(nibName: "HistoryViewCell", bundle: nil),  forCellReuseIdentifier: "HistoryViewCell")
@@ -66,9 +67,6 @@ class NomenclaturaDetailsViewController: UIViewController {
         
         
         self.listOfChanges.reloadData()
-        print("PREVIOUS STATES")
-        print(previousStates)
-        
     }
     
     func fetchClothes(model: ProductModel) -> String {
@@ -94,29 +92,17 @@ class NomenclaturaDetailsViewController: UIViewController {
         if let img = NetworkHelper.getFullImagePath(localPath: model.image) {
             self.productImage.sd_setImage(with: img, placeholderImage: UIImage(named: "error_i"), completed: nil)
         }
-        /*articleLabel.text = String(describing: model.article)
-        longDurationLabel.text = String(describing: model.length)
-        weightLabel.text = String(describing: model.width)
-        listOfTkanei.text = fetchClothes(model: model)
-        listOfFurnitura.text = fetchAccessory(model: model) */
     }
-    
-
 }
 
 
 extension NomenclaturaDetailsViewController : UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return previousStates.count + 2
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 1 {
-            return 60.0
-        } else {
-            return tableView.rowHeight
-        }
-    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -149,6 +135,16 @@ extension NomenclaturaDetailsViewController : UITableViewDataSource {
         upcastedCell.bind(activityData)
         
         return upcastedCell
+    }
+}
+
+extension NomenclaturaDetailsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 1 {
+            return 60.0
+        } else {
+            return tableView.rowHeight
+        }
     }
 }
 

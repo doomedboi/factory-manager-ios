@@ -265,4 +265,36 @@ extension NetworkManager {
         
     }
     
+    
+    static func accessoryDecommission(article: Int, quanity: Int, complition: @escaping (Bool)-> (Void)) {
+        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/accessory/\(article)?quantity=\(quanity)")!
+        
+        var request = URLRequest(url: components.url!)
+        
+        var headerPayload = "Bearer "
+        headerPayload += CoreDataManager.shared.userToken!
+        
+        
+        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "PATCH"
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+            print(response.statusCode)
+            if response.statusCode == 200 {
+                print("Succes")
+                complition(true)
+            } else {
+                complition(false)
+            }
+            
+        }
+        task.resume()
+        
+    }
+    
 }
