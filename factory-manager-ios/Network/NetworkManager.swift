@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import CoreVideo
 
 class NetworkManager {
     
     static let shared = NetworkManager()
+    
+    static let baseURL = "https://Sewing.mrfox131.software/api/v1"
     
     static let encoder = JSONEncoder()
     static let decoder = JSONDecoder()
@@ -20,15 +23,43 @@ class NetworkManager {
         NetworkManager.encoder.keyEncodingStrategy = .convertToSnakeCase
         }
     
-    static private func createUrlRequest(urlObj: URL, body: Data) -> URLRequest {
+    static private func createUrlRequest(urlObj: URL) -> URLRequest {
         var urlRequest = URLRequest(url: urlObj)
+        if let token = CoreDataManager.shared.userToken {
+            urlRequest.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+        }
         
-        urlRequest.httpMethod = "POST"
-        urlRequest.httpBody = body
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         
         return urlRequest
+    }
+    
+    static private func createGetRequest(url: URL, body: Data? = nil) -> URLRequest {
+        var req = createUrlRequest(urlObj: url)
+        
+        req.httpMethod = "GET"
+        req.httpBody = body
+        
+        return req
+    }
+    
+    static private func createPostRequest(url: URL, body: Data? = nil) -> URLRequest {
+        var req = createUrlRequest(urlObj: url)
+        
+        req.httpMethod = "POST"
+        req.httpBody = body
+        
+        return req
+    }
+    
+    static private func createPatchRequest(url: URL, body: Data? = nil) -> URLRequest {
+        var req = createUrlRequest(urlObj: url)
+        
+        req.httpMethod = "PATCH"
+        req.httpBody = body
+        
+        return req
     }
 }
 
@@ -36,15 +67,12 @@ extension NetworkManager {
     static func login(_ body: Data,
                           completion: @escaping ((userLoginRequstModel) -> Void),
                           onError :@escaping((ApiError) -> Void)) {
-        guard let url = URL(string: "https://Sewing.mrfox131.software/api/v1/plane_login") else {
+        guard let url = URL(string: baseURL + "/plane_login") else {
             print("error with url")
             return
         }
         
-        NetworkManager.decoder.keyDecodingStrategy = .convertFromSnakeCase
-        
-        
-        let request = createUrlRequest(urlObj: url, body: body)
+        let request = createPostRequest(url: url, body: body)
         
         let session = URLSession.shared
         
@@ -87,14 +115,9 @@ extension NetworkManager {
     }
     
     static func me(completion: @escaping ((userModel) -> Void)) {
-        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/me")!
+        let url = URL(string: baseURL + "/me")!
         
-        var request = URLRequest(url: components.url!)
-
-        var headerPayload = "Bearer "
-        headerPayload += CoreDataManager.shared.userToken!
-        
-        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        let request = createGetRequest(url: url, body: nil)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data,
@@ -117,14 +140,9 @@ extension NetworkManager {
     }
     
     static func cloth(complition: @escaping ([ClothModel])->(Void)) {
-        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/cloth")!
+        let url = URL(string: baseURL + "/cloth")!
         
-        var request = URLRequest(url: components.url!)
-
-        var headerPayload = "Bearer "
-        headerPayload += CoreDataManager.shared.userToken!
-        
-        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        let request = createGetRequest(url: url, body: nil)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -145,14 +163,9 @@ extension NetworkManager {
     }
     
     static func accessory(complition: @escaping ([AccessoryModel])->(Void)) {
-        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/accessory")!
+        let url = URL(string: baseURL + "/accessory")!
         
-        var request = URLRequest(url: components.url!)
-
-        var headerPayload = "Bearer "
-        headerPayload += CoreDataManager.shared.userToken!
-        
-        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        let request = createGetRequest(url: url, body: nil)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -175,14 +188,11 @@ extension NetworkManager {
     
     
     static func product(complition: @escaping ([ProductModel])->(Void)) {
-        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/product")!
+        guard let url = URL(string: baseURL + "/product") else {
+            return
+        }
         
-        var request = URLRequest(url: components.url!)
-
-        var headerPayload = "Bearer "
-        headerPayload += CoreDataManager.shared.userToken!
-        
-        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+       let request = createGetRequest(url: url, body: nil)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -206,14 +216,9 @@ extension NetworkManager {
     
     
     static func order(complition: @escaping ([OrderModel])->(Void)) {
-        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/order")!
+        guard let url = URL(string: baseURL + "/order") else {return}
         
-        var request = URLRequest(url: components.url!)
-
-        var headerPayload = "Bearer "
-        headerPayload += CoreDataManager.shared.userToken!
-        
-        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        let request = createGetRequest(url: url, body: nil)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -234,15 +239,10 @@ extension NetworkManager {
         task.resume()
     }
     
-    static func getPreviousProducts(article: Int, complition: @escaping ([ProductModel])-> (Void)) {
-        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/product/\(article)/previous")!
+    static func getPreviousProducts(article: Int, size: Int, complition: @escaping ([ProductModel])-> (Void)) {
+        guard let url = URL(string: baseURL + "/product/v2/\(article)/\(size)/previous") else { return }
         
-        var request = URLRequest(url: components.url!)
-
-        var headerPayload = "Bearer "
-        headerPayload += CoreDataManager.shared.userToken!
-        
-        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
+        let request = createGetRequest(url: url, body: nil)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -267,17 +267,9 @@ extension NetworkManager {
     
     
     static func accessoryDecommission(article: Int, quanity: Int, complition: @escaping (Bool)-> (Void)) {
-        let components = URLComponents(string: "https://Sewing.mrfox131.software/api/v1/accessory/\(article)?quantity=\(quanity)")!
+        let url = URL(string: "/accessory/\(article)?quantity=\(quanity)")!
         
-        var request = URLRequest(url: components.url!)
-        
-        var headerPayload = "Bearer "
-        headerPayload += CoreDataManager.shared.userToken!
-        
-        
-        request.addValue(headerPayload, forHTTPHeaderField: "Authorization")
-        request.httpMethod = "PATCH"
-        
+        let request = createPatchRequest(url: url, body: nil)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
