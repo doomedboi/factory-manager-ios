@@ -22,6 +22,14 @@ class OrderDetailViewController: UIViewController {
     
     
     
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var customerLabel: UILabel!
+    @IBOutlet weak var managerLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title =  "Заказ номер \(model?.id ?? 0)"
@@ -55,12 +63,13 @@ class OrderDetailViewController: UIViewController {
     }
     
     func bind(_ model: OrderModel) {
-        /*
+        print(model.id!)
         numberLabel.text = String(describing: model.id!)
-        dataLabel.text = model.creation_date
+        dataLabel.text = String(model.creationDate.prefix(10))
         priceLabel.text = String(describing: model.cost)
         statusLabel.text = orderStages[model.stage ?? 0]
-         */
+        customerLabel.text = model.customer.name
+        managerLabel.text = model.manager.name
     }
     
 
