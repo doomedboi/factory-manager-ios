@@ -98,7 +98,7 @@ extension OrderDetailViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        upcastedCell.bindProduct(activityData!)
+        upcastedCell.bindOrderItem(activityData!, amount: 666)
         
         return upcastedCell
     }

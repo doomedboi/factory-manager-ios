@@ -14,6 +14,7 @@ class OrdersTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     
     @IBOutlet weak var designView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -36,7 +37,7 @@ class OrdersTableViewCell: UITableViewCell {
           //set the values for top,left,bottom,right margins
           let margins = UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8)
           contentView.frame = contentView.frame.inset(by: margins)
-          contentView.layer.cornerRadius = 8
+          contentView.layer.cornerRadius = 4
     }
     
     func bind(_ model: OrderModel) {

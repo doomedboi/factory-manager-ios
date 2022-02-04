@@ -22,7 +22,9 @@ class NomenclaturaTableViewCell: UITableViewCell {
     @IBOutlet weak var articleLabel: UILabel!
     
     @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var amountLabel: UILabel!
     
+    @IBOutlet weak var amountVallue: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -72,5 +74,11 @@ class NomenclaturaTableViewCell: UITableViewCell {
     
     func bindProduct(_ model: ProductModel) {
         self.setOutlets(name: model.name, article: String(model.article), imagePath: model.image)
+    }
+    
+    func bindOrderItem(_ model: ProductModel, amount: Int) {
+        self.bindProduct(model)
+        self.amountLabel.text = "Количество"
+        self.amountVallue.text = String(describing: amount)
     }
 }

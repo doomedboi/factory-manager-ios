@@ -17,8 +17,6 @@
 		C447E31D27AACCDC00D3A5AC /* RulonsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C447E31B27AACCDC00D3A5AC /* RulonsViewCell.xib */; };
 		C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */; };
 		C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */; };
-		C461E52A27A83DA800AAA300 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E52827A83DA800AAA300 /* ItemsTableViewCell.swift */; };
-		C461E52B27A83DA800AAA300 /* ItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C461E52927A83DA800AAA300 /* ItemsTableViewCell.xib */; };
 		C461E52F27A8F79900AAA300 /* ChangesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E52D27A8F79900AAA300 /* ChangesTableViewCell.swift */; };
 		C461E53027A8F79900AAA300 /* ChangesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C461E52E27A8F79900AAA300 /* ChangesTableViewCell.xib */; };
 		C469C5EA2790552100843E52 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C469C5E92790552100843E52 /* SDWebImage */; };
@@ -86,8 +84,6 @@
 		C447E31B27AACCDC00D3A5AC /* RulonsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulonsViewCell.xib; sourceTree = "<group>"; };
 		C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaDetailsViewController.swift; sourceTree = "<group>"; };
 		C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaDetailsViewController.xib; sourceTree = "<group>"; };
-		C461E52827A83DA800AAA300 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
-		C461E52927A83DA800AAA300 /* ItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewCell.xib; sourceTree = "<group>"; };
 		C461E52D27A8F79900AAA300 /* ChangesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangesTableViewCell.swift; sourceTree = "<group>"; };
 		C461E52E27A8F79900AAA300 /* ChangesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangesTableViewCell.xib; sourceTree = "<group>"; };
 		C4790C43278879B800C9D60A /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -275,8 +271,6 @@
 			children = (
 				C48CBCC727914F25001A365F /* OrderDetailViewController.swift */,
 				C48CBCC827914F25001A365F /* OrderDetailViewController.xib */,
-				C461E52827A83DA800AAA300 /* ItemsTableViewCell.swift */,
-				C461E52927A83DA800AAA300 /* ItemsTableViewCell.xib */,
 			);
 			path = OrderDetails;
 			sourceTree = "<group>";
@@ -486,7 +480,6 @@
 				C4A1A98C27911CF000A84066 /* DetailsViewController.xib in Resources */,
 				C447E31927AACCB900D3A5AC /* MaterialDescriptionViewCell.xib in Resources */,
 				C48072A527AA85850048AC28 /* ItemDescriptionViewCell.xib in Resources */,
-				C461E52B27A83DA800AAA300 /* ItemsTableViewCell.xib in Resources */,
 				C48072A927AA98B10048AC28 /* HistoryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,7 +520,6 @@
 				C4790C49278879CD00C9D60A /* ProfileViewController.swift in Sources */,
 				C49374CE27854BE000DFD42A /* AppDelegate.swift in Sources */,
 				C48072A827AA98B10048AC28 /* HistoryViewCell.swift in Sources */,
-				C461E52A27A83DA800AAA300 /* ItemsTableViewCell.swift in Sources */,
 				C493750527854DB600DFD42A /* LoginViewController.swift in Sources */,
 				C49374D027854BE000DFD42A /* SceneDelegate.swift in Sources */,
 				C493750C278702E800DFD42A /* nomenclatureViewController.swift in Sources */,

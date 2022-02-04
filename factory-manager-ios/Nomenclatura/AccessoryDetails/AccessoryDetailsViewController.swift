@@ -32,11 +32,6 @@ class AccessoryDetailsViewController: UIViewController {
     
     @IBAction func didSpisatTap(_ sender: Any) {
         guard let quanity = amountTextField.text else { return }
-        
-        
-        
-        
-        
         //  Decommission in kg
         if selectedIndex == 0 {
             
@@ -52,13 +47,13 @@ class AccessoryDetailsViewController: UIViewController {
         } else {
             guard let qInt = Int(quanity) else { return } //  ALERT
             DispatchQueue.main.async {
-                    NetworkManager.accessoryDecommission(article: self.model!.article, quanity: qInt, complition: { status in
-                        if status == true {
-                            self.updateAmount()
-                        }
-            })
+                NetworkManager.accessoryDecommission(article: self.model!.article, quanity: qInt, complition: { status in
+                    if status == true {
+                        self.updateAmount()
+                    }
+                })
             }
-    }
+        }
     }
     
     @objc func decommishHandler(_ sender: UISegmentedControl) {

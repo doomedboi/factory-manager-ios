@@ -19,9 +19,13 @@ class ChangesTableViewCell: UITableViewCell {
     @IBOutlet weak var furnituraList: UILabel!
     
     
+    @IBOutlet weak var contentVie: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 20
+        self.contentVie.layer.cornerRadius = 5
+        self.contentVie.layer.borderWidth = 5
+        self.contentVie.layer.borderColor = UIColor(named: "backgroundColor")?.cgColor
         // Initialization code
     }
 

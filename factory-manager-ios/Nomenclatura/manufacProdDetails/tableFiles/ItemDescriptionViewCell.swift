@@ -17,6 +17,7 @@ class ItemDescriptionViewCell: UITableViewCell {
     @IBOutlet weak var listOfTkanei: UILabel!
     @IBOutlet weak var listOfFurnitura: UILabel!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,6 +31,7 @@ class ItemDescriptionViewCell: UITableViewCell {
         sizeLabel.text = String(describing: model.size)
         listOfTkanei.text = fetchClothes(model: model)
         listOfFurnitura.text = fetchAccessory(model: model)
+        descriptionLabel.text = model.comment
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
