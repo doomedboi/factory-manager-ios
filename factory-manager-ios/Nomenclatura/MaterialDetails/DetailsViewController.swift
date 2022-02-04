@@ -94,35 +94,7 @@ extension DetailsViewController: UITableViewDelegate {
         castedCell.bind(currentCellInfo)
         
         return castedCell
-        /*if indexPath.row == 0 {
-            let deqCell = detailsTable.dequeueReusableCell(withIdentifier: "ItemDescriptionViewCell", for: indexPath)
-            guard let cell = deqCell as? ItemDescriptionViewCell else { return UITableViewCell() }
-            cell.bind(localModal!)
-            return cell
-        }
         
-        //  history of ch label
-        if indexPath.row == 1 {
-            let cell = detailsTable.dequeueReusableCell(withIdentifier: "HistoryViewCell", for: indexPath)
-            guard let upcell = cell as? HistoryViewCell else { return UITableViewCell() }
-            return upcell
-        }
-        
-        let activityData = self.previousStates[indexPath.row-2]
-        print("=====")
-        print(activityData)
-        
-        let dequeuedCell = listOfChanges.dequeueReusableCell(withIdentifier: "ChangesTableViewCell", for: indexPath)
-        
-        // not work without guard asks unwrap
-        guard let upcastedCell = dequeuedCell as? ChangesTableViewCell
-        else {
-            return UITableViewCell()
-        }
-        
-        upcastedCell.bind(activityData)
-        
-        return upcastedCell */
     }
 }
 

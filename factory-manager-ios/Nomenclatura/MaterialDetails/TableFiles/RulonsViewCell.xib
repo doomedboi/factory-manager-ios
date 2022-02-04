@@ -3,7 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,74 +18,96 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8M-dB-cIs">
-                        <rect key="frame" x="35" y="12" width="80" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Длина:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPT-PW-gkg">
-                        <rect key="frame" x="35" y="47" width="76.5" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4E7-16-6NF">
-                        <rect key="frame" x="20" y="125" width="101" height="48"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-xJ-MTk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcM-tW-fdo" customClass="OrangeButton" customModule="factory_manager_ios" customModuleProvider="target">
+                                <rect key="frame" x="146" y="108" width="148" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="9gt-4I-Czg"/>
+                                    <constraint firstAttribute="height" constant="57" id="fXo-xq-neW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="СПИСАТЬ"/>
+                                <connections>
+                                    <action selector="didSpisatBtnTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hrv-5M-izL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orf-EN-oT0">
+                                <rect key="frame" x="146" y="20" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8M-dB-cIs">
+                                <rect key="frame" x="35" y="20" width="80" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите количество " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4E7-16-6NF">
+                                <rect key="frame" x="20" y="112" width="101" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="QvH-pW-MUG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Длина:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPT-PW-gkg">
+                                <rect key="frame" x="35" y="55" width="76.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgG-GU-43G">
+                                <rect key="frame" x="146" y="55" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="48" id="QvH-pW-MUG"/>
+                            <constraint firstItem="b8M-dB-cIs" firstAttribute="leading" secondItem="dUy-xJ-MTk" secondAttribute="leading" constant="35" id="5ds-wD-Isd"/>
+                            <constraint firstAttribute="trailing" secondItem="ZcM-tW-fdo" secondAttribute="trailing" constant="20" id="A7S-hg-W8t"/>
+                            <constraint firstItem="ZcM-tW-fdo" firstAttribute="leading" secondItem="4E7-16-6NF" secondAttribute="trailing" constant="25" id="AP5-nZ-iFD"/>
+                            <constraint firstItem="orf-EN-oT0" firstAttribute="top" secondItem="dUy-xJ-MTk" secondAttribute="top" constant="20" id="C6I-sk-spx"/>
+                            <constraint firstItem="XPT-PW-gkg" firstAttribute="top" secondItem="b8M-dB-cIs" secondAttribute="bottom" constant="6" id="FjT-Ut-7zs"/>
+                            <constraint firstItem="orf-EN-oT0" firstAttribute="leading" secondItem="b8M-dB-cIs" secondAttribute="trailing" constant="31" id="G3h-OW-1eP"/>
+                            <constraint firstItem="b8M-dB-cIs" firstAttribute="top" secondItem="dUy-xJ-MTk" secondAttribute="top" constant="20" id="IiH-Tz-NTk"/>
+                            <constraint firstItem="EgG-GU-43G" firstAttribute="leading" secondItem="XPT-PW-gkg" secondAttribute="trailing" constant="34.5" id="Q1x-2I-DPv"/>
+                            <constraint firstItem="EgG-GU-43G" firstAttribute="top" secondItem="orf-EN-oT0" secondAttribute="bottom" constant="6" id="dOi-Ek-w63"/>
+                            <constraint firstItem="XPT-PW-gkg" firstAttribute="leading" secondItem="dUy-xJ-MTk" secondAttribute="leading" constant="35" id="ih2-4V-LH0"/>
+                            <constraint firstItem="4E7-16-6NF" firstAttribute="leading" secondItem="dUy-xJ-MTk" secondAttribute="leading" constant="20" id="mof-64-hne"/>
+                            <constraint firstItem="4E7-16-6NF" firstAttribute="top" secondItem="XPT-PW-gkg" secondAttribute="bottom" constant="28" id="nbg-6e-LrJ"/>
+                            <constraint firstItem="ZcM-tW-fdo" firstAttribute="top" secondItem="XPT-PW-gkg" secondAttribute="bottom" constant="24" id="r0l-Bt-PbR"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcM-tW-fdo" customClass="OrangeButton" customModule="factory_manager_ios" customModuleProvider="target">
-                        <rect key="frame" x="146" y="121" width="148" height="57"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="148" id="9gt-4I-Czg"/>
-                            <constraint firstAttribute="height" constant="57" id="fXo-xq-neW"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                        <connections>
-                            <action selector="didSpisatBtnTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hrv-5M-izL"/>
-                        </connections>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orf-EN-oT0">
-                        <rect key="frame" x="146" y="12" width="57" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgG-GU-43G">
-                        <rect key="frame" x="146" y="47" width="57" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" name="backgroundColor"/>
                 <constraints>
-                    <constraint firstItem="ZcM-tW-fdo" firstAttribute="leading" secondItem="4E7-16-6NF" secondAttribute="trailing" constant="25" id="0qQ-Tz-Qba"/>
-                    <constraint firstItem="XPT-PW-gkg" firstAttribute="top" secondItem="b8M-dB-cIs" secondAttribute="bottom" constant="6" id="7KG-tU-Wve"/>
-                    <constraint firstItem="4E7-16-6NF" firstAttribute="top" secondItem="XPT-PW-gkg" secondAttribute="bottom" constant="49" id="8d6-ON-y1O"/>
-                    <constraint firstItem="b8M-dB-cIs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="MmB-XP-XNE"/>
-                    <constraint firstItem="XPT-PW-gkg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="P16-IB-ApF"/>
-                    <constraint firstItem="b8M-dB-cIs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Rcm-6x-kTr"/>
-                    <constraint firstItem="EgG-GU-43G" firstAttribute="top" secondItem="orf-EN-oT0" secondAttribute="bottom" constant="6" id="S7z-G9-AyO"/>
-                    <constraint firstItem="orf-EN-oT0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Uz6-CO-Kaa"/>
-                    <constraint firstAttribute="trailing" secondItem="ZcM-tW-fdo" secondAttribute="trailing" constant="26" id="WzJ-C9-MXg"/>
-                    <constraint firstItem="ZcM-tW-fdo" firstAttribute="top" secondItem="XPT-PW-gkg" secondAttribute="bottom" constant="45" id="ZZw-Qe-haX"/>
-                    <constraint firstItem="4E7-16-6NF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bKp-UB-5N2"/>
-                    <constraint firstItem="orf-EN-oT0" firstAttribute="leading" secondItem="b8M-dB-cIs" secondAttribute="trailing" constant="31" id="oo5-RQ-tID"/>
-                    <constraint firstItem="EgG-GU-43G" firstAttribute="leading" secondItem="XPT-PW-gkg" secondAttribute="trailing" constant="34.5" id="vwv-7j-0t5"/>
+                    <constraint firstItem="dUy-xJ-MTk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4Md-bJ-bEJ"/>
+                    <constraint firstAttribute="bottom" secondItem="dUy-xJ-MTk" secondAttribute="bottom" id="F0u-dE-CEe"/>
+                    <constraint firstAttribute="trailing" secondItem="dUy-xJ-MTk" secondAttribute="trailing" id="Whs-3Y-jLJ"/>
+                    <constraint firstItem="dUy-xJ-MTk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Y2S-ef-31U"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="Lenght" destination="EgG-GU-43G" id="75v-19-Vqh"/>
                 <outlet property="amountTextFiled" destination="4E7-16-6NF" id="H7J-Zv-mIL"/>
+                <outlet property="contentVie" destination="dUy-xJ-MTk" id="JMM-ZQ-xdV"/>
                 <outlet property="numberLabel" destination="orf-EN-oT0" id="8jI-nE-l1Z"/>
             </connections>
             <point key="canvasLocation" x="139" y="76"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.019607843137254902" green="0.49019607843137253" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

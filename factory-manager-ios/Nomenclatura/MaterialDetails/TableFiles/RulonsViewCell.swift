@@ -10,6 +10,7 @@ import UIKit
 class RulonsViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var contentVie: UIView!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var Lenght: UILabel!
     @IBOutlet weak var amountTextFiled: UITextField!
@@ -41,6 +42,9 @@ class RulonsViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.contentVie.layer.cornerRadius = 5
+        self.contentVie.layer.borderWidth = 5
+        self.contentVie.layer.borderColor = UIColor(named: "backgroundColor")?.cgColor
     }
 
     private func UpdateVisualAmount(to: Double) {

@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAg-gH-AYg">
-                                <rect key="frame" x="47" y="175" width="57" height="29"/>
+                                <rect key="frame" x="50" y="175" width="57" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0N-tK-fBd">
-                                <rect key="frame" x="39" y="127" width="57" height="29"/>
+                                <rect key="frame" x="50" y="127" width="57" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                         <constraints>
                             <constraint firstItem="qPt-BP-WLQ" firstAttribute="leading" secondItem="gk5-EJ-kDZ" secondAttribute="leadingMargin" constant="20" id="0s8-YD-UcA"/>
                             <constraint firstItem="y0N-tK-fBd" firstAttribute="top" secondItem="qPt-BP-WLQ" secondAttribute="bottom" id="9AV-Qx-Kky"/>
-                            <constraint firstItem="kAg-gH-AYg" firstAttribute="leading" secondItem="gk5-EJ-kDZ" secondAttribute="leading" constant="47" id="Cnz-R9-ylQ"/>
+                            <constraint firstItem="kAg-gH-AYg" firstAttribute="leading" secondItem="gk5-EJ-kDZ" secondAttribute="leading" constant="50" id="Cnz-R9-ylQ"/>
                             <constraint firstItem="eV0-RA-kW6" firstAttribute="leading" secondItem="gk5-EJ-kDZ" secondAttribute="leadingMargin" constant="20" id="NBb-ST-ekw"/>
                             <constraint firstItem="Ymu-pe-JyS" firstAttribute="leading" secondItem="gk5-EJ-kDZ" secondAttribute="leadingMargin" constant="20" id="Prf-qk-EOY"/>
                             <constraint firstItem="kAg-gH-AYg" firstAttribute="top" secondItem="Ymu-pe-JyS" secondAttribute="bottom" id="Qw5-Qe-c6Q"/>
@@ -86,7 +86,7 @@
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kAg-gH-AYg" secondAttribute="bottom" constant="2" id="kUJ-HK-AwB"/>
                             <constraint firstItem="eV0-RA-kW6" firstAttribute="top" secondItem="gk5-EJ-kDZ" secondAttribute="top" constant="20" id="l6u-XA-Da0"/>
                             <constraint firstItem="rIY-aH-Yv9" firstAttribute="leading" secondItem="gk5-EJ-kDZ" secondAttribute="leadingMargin" constant="20" id="mqh-Ma-NKr"/>
-                            <constraint firstItem="y0N-tK-fBd" firstAttribute="leading" secondItem="gk5-EJ-kDZ" secondAttribute="leading" constant="39" id="njA-gz-Hw1"/>
+                            <constraint firstItem="y0N-tK-fBd" firstAttribute="leading" secondItem="gk5-EJ-kDZ" secondAttribute="leading" constant="50" id="njA-gz-Hw1"/>
                             <constraint firstItem="NX2-iY-SZ8" firstAttribute="top" secondItem="gk5-EJ-kDZ" secondAttribute="top" constant="20" id="pfd-1i-uVz"/>
                             <constraint firstItem="Ymu-pe-JyS" firstAttribute="top" secondItem="y0N-tK-fBd" secondAttribute="bottom" constant="-10" id="tZ0-xa-nr2"/>
                         </constraints>
