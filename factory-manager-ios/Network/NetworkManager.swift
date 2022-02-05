@@ -393,4 +393,29 @@ extension NetworkManager {
     }
 
     
+    static func getClothMapping(orderId: Int, complition: @escaping([MappingClothModel])->(Void)) {
+        guard let url = URL(string: baseURL + "/get_cloth_mappings/\(orderId)") else { return }
+        
+        let request = createGetRequest(url: url, body: nil)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            guard let data = data else { return }
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+            print(response.statusCode)
+            do {
+                let castedData = try NetworkManager.decoder.decode([MappingClothModel].self, from: data)
+                complition(castedData)
+                print("DATA:")
+                print(castedData)
+            } catch(let e) {
+                print("decode err: \(e)")
+            }
+            
+        }
+        task.resume()
+        
+    }
 }

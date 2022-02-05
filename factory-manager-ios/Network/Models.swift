@@ -91,6 +91,11 @@ struct OrderModel: Decodable {
     let products: [ProductsContainerModel]
 }
 
+struct MappingClothModel: Decodable {
+    let article: Int
+    let map: String
+    let batchNumber: Int
+}
 
 struct ClothArticleModel: Decodable {
     let number: Int

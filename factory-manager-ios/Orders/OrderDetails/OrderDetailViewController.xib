@@ -17,6 +17,8 @@
                 <outlet property="itemsTable" destination="x3M-ru-zLf" id="9Gx-HW-C9I"/>
                 <outlet property="itemsViewOutlet" destination="Ack-g2-GHP" id="mxX-3D-egK"/>
                 <outlet property="managerLabel" destination="cNl-q1-xUe" id="ueW-gq-qFC"/>
+                <outlet property="mappingTable" destination="cSH-m0-07k" id="VrO-eS-jBN"/>
+                <outlet property="mappingView" destination="Hom-Rw-uOF" id="Cci-Xg-Ves"/>
                 <outlet property="numberLabel" destination="R8Q-cC-Uht" id="e7w-m5-cpK"/>
                 <outlet property="priceLabel" destination="ETQ-ub-u73" id="U5v-Ww-FLI"/>
                 <outlet property="segmentView" destination="Cbi-eO-Erh" id="0c2-GS-hqi"/>
@@ -37,8 +39,25 @@
                     <segments>
                         <segment title="Информация"/>
                         <segment title="Товары"/>
+                        <segment title="Раскрой"/>
                     </segments>
                 </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-Rw-uOF">
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cSH-m0-07k">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
+                            <color key="backgroundColor" name="backgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" name="backgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cSH-m0-07k" secondAttribute="trailing" id="7qN-Ei-5Ke"/>
+                        <constraint firstItem="cSH-m0-07k" firstAttribute="leading" secondItem="Hom-Rw-uOF" secondAttribute="leading" id="Fks-W7-NRo"/>
+                        <constraint firstAttribute="bottom" secondItem="cSH-m0-07k" secondAttribute="bottom" id="HuT-Ds-uFO"/>
+                        <constraint firstItem="cSH-m0-07k" firstAttribute="top" secondItem="Hom-Rw-uOF" secondAttribute="top" id="gzF-57-Cdi"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ack-g2-GHP" userLabel="itemsView">
                     <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                     <subviews>
@@ -100,7 +119,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6g-N5-EuK">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6g-N5-EuK">
                             <rect key="frame" x="150" y="169" width="57" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <nil key="textColor"/>
@@ -202,14 +221,18 @@
                 <constraint firstItem="x3M-ru-zLf" firstAttribute="top" secondItem="Cbi-eO-Erh" secondAttribute="bottom" id="7DX-vx-aVB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sTD-hq-bpq" secondAttribute="trailing" id="7sX-i2-UJo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Cbi-eO-Erh" secondAttribute="trailing" id="ANd-wu-cWW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hom-Rw-uOF" secondAttribute="trailing" id="JTX-1U-QeK"/>
                 <constraint firstItem="sTD-hq-bpq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OB7-4T-Ot6"/>
                 <constraint firstItem="sTD-hq-bpq" firstAttribute="top" secondItem="Cbi-eO-Erh" secondAttribute="bottom" id="OnE-mh-egA"/>
                 <constraint firstItem="Cbi-eO-Erh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="P32-I1-r9y"/>
+                <constraint firstItem="Hom-Rw-uOF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Uee-tN-WXT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ack-g2-GHP" secondAttribute="bottom" id="V24-f9-wwE"/>
+                <constraint firstItem="Hom-Rw-uOF" firstAttribute="top" secondItem="Cbi-eO-Erh" secondAttribute="bottom" id="Y7T-tf-OCe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sTD-hq-bpq" secondAttribute="bottom" id="YgK-zv-bWQ"/>
                 <constraint firstItem="Cbi-eO-Erh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bOS-54-0vi"/>
                 <constraint firstItem="Ack-g2-GHP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qWg-jY-dU0"/>
                 <constraint firstItem="Ack-g2-GHP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uZ5-fQ-mVp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Hom-Rw-uOF" secondAttribute="bottom" id="z2y-tX-aOJ"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </view>

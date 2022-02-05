@@ -17,6 +17,8 @@
 		C447E31D27AACCDC00D3A5AC /* RulonsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C447E31B27AACCDC00D3A5AC /* RulonsViewCell.xib */; };
 		C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */; };
 		C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */; };
+		C457F6B327AE181A00EE31D4 /* MapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C457F6B127AE181A00EE31D4 /* MapViewCell.swift */; };
+		C457F6B427AE181A00EE31D4 /* MapViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C457F6B227AE181A00EE31D4 /* MapViewCell.xib */; };
 		C461E52F27A8F79900AAA300 /* ChangesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E52D27A8F79900AAA300 /* ChangesTableViewCell.swift */; };
 		C461E53027A8F79900AAA300 /* ChangesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C461E52E27A8F79900AAA300 /* ChangesTableViewCell.xib */; };
 		C469C5EA2790552100843E52 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C469C5E92790552100843E52 /* SDWebImage */; };
@@ -54,6 +56,8 @@
 		C4A1A9922791325E00A84066 /* AccessoryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A1A9902791325E00A84066 /* AccessoryDetailsViewController.xib */; };
 		C4A3E722279010C20093EA66 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3E721279010C20093EA66 /* extension.swift */; };
 		C4A3E7252790463F0093EA66 /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3E7242790463F0093EA66 /* models.swift */; };
+		C4DC17B327AE2C8000CC3719 /* OrderMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC17B127AE2C8000CC3719 /* OrderMapViewController.swift */; };
+		C4DC17B427AE2C8000CC3719 /* OrderMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DC17B227AE2C8000CC3719 /* OrderMapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,8 @@
 		C447E31B27AACCDC00D3A5AC /* RulonsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulonsViewCell.xib; sourceTree = "<group>"; };
 		C448C3D8278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomenclaturaDetailsViewController.swift; sourceTree = "<group>"; };
 		C448C3D9278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomenclaturaDetailsViewController.xib; sourceTree = "<group>"; };
+		C457F6B127AE181A00EE31D4 /* MapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCell.swift; sourceTree = "<group>"; };
+		C457F6B227AE181A00EE31D4 /* MapViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewCell.xib; sourceTree = "<group>"; };
 		C461E52D27A8F79900AAA300 /* ChangesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangesTableViewCell.swift; sourceTree = "<group>"; };
 		C461E52E27A8F79900AAA300 /* ChangesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangesTableViewCell.xib; sourceTree = "<group>"; };
 		C4790C43278879B800C9D60A /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +130,8 @@
 		C4A1A9902791325E00A84066 /* AccessoryDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryDetailsViewController.xib; sourceTree = "<group>"; };
 		C4A3E721279010C20093EA66 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		C4A3E7242790463F0093EA66 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		C4DC17B127AE2C8000CC3719 /* OrderMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMapViewController.swift; sourceTree = "<group>"; };
+		C4DC17B227AE2C8000CC3719 /* OrderMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderMapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +243,15 @@
 			path = manufacProdDetails;
 			sourceTree = "<group>";
 		};
+		C457F6B027AE181A00EE31D4 /* mapCell */ = {
+			isa = PBXGroup;
+			children = (
+				C457F6B127AE181A00EE31D4 /* MapViewCell.swift */,
+				C457F6B227AE181A00EE31D4 /* MapViewCell.xib */,
+			);
+			path = mapCell;
+			sourceTree = "<group>";
+		};
 		C461E52C27A8F77700AAA300 /* tableFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +286,8 @@
 		C48CBCC627914F0A001A365F /* OrderDetails */ = {
 			isa = PBXGroup;
 			children = (
+				C4DC17B027AE2C5700CC3719 /* orderMapView */,
+				C457F6B027AE181A00EE31D4 /* mapCell */,
 				C48CBCC727914F25001A365F /* OrderDetailViewController.swift */,
 				C48CBCC827914F25001A365F /* OrderDetailViewController.xib */,
 			);
@@ -350,6 +369,15 @@
 				C4A1A9902791325E00A84066 /* AccessoryDetailsViewController.xib */,
 			);
 			path = AccessoryDetails;
+			sourceTree = "<group>";
+		};
+		C4DC17B027AE2C5700CC3719 /* orderMapView */ = {
+			isa = PBXGroup;
+			children = (
+				C4DC17B127AE2C8000CC3719 /* OrderMapViewController.swift */,
+				C4DC17B227AE2C8000CC3719 /* OrderMapViewController.xib */,
+			);
+			path = orderMapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,12 +503,14 @@
 				C48CBCCA27914F25001A365F /* OrderDetailViewController.xib in Resources */,
 				C49374DD27854BE300DFD42A /* LaunchScreen.storyboard in Resources */,
 				C448C3DB278EA8A10011BEA4 /* NomenclaturaDetailsViewController.xib in Resources */,
+				C457F6B427AE181A00EE31D4 /* MapViewCell.xib in Resources */,
 				C49374DA27854BE300DFD42A /* Assets.xcassets in Resources */,
 				C49374D527854BE100DFD42A /* Main.storyboard in Resources */,
 				C4A1A98C27911CF000A84066 /* DetailsViewController.xib in Resources */,
 				C447E31927AACCB900D3A5AC /* MaterialDescriptionViewCell.xib in Resources */,
 				C48072A527AA85850048AC28 /* ItemDescriptionViewCell.xib in Resources */,
 				C48072A927AA98B10048AC28 /* HistoryViewCell.xib in Resources */,
+				C4DC17B427AE2C8000CC3719 /* OrderMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +543,7 @@
 				C48CBCC927914F25001A365F /* OrderDetailViewController.swift in Sources */,
 				C4A1A9912791325E00A84066 /* AccessoryDetailsViewController.swift in Sources */,
 				C448C3DA278EA8A10011BEA4 /* NomenclaturaDetailsViewController.swift in Sources */,
+				C4DC17B327AE2C8000CC3719 /* OrderMapViewController.swift in Sources */,
 				C4790C4D27887C6600C9D60A /* TabbarViewController.swift in Sources */,
 				C4790C45278879B800C9D60A /* OrdersViewController.swift in Sources */,
 				C461E52F27A8F79900AAA300 /* ChangesTableViewCell.swift in Sources */,
@@ -530,6 +561,7 @@
 				C447E31827AACCB900D3A5AC /* MaterialDescriptionViewCell.swift in Sources */,
 				C48072A427AA85850048AC28 /* ItemDescriptionViewCell.swift in Sources */,
 				C4824727278B224600B09424 /* CoreDataManager.swift in Sources */,
+				C457F6B327AE181A00EE31D4 /* MapViewCell.swift in Sources */,
 				C4824722278B05AD00B09424 /* Models.swift in Sources */,
 				C4A1A98B27911CEF00A84066 /* DetailsViewController.swift in Sources */,
 			);
