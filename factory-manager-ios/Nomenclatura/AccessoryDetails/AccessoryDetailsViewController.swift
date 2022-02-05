@@ -30,12 +30,29 @@ class AccessoryDetailsViewController: UIViewController {
     
     private var selectedIndex: Int = 1
     
+    private func causeAlert() {
+        let alert = UIAlertController(title: "Проверьте поля", message: "Количество не может быть меньше или равно нулю!",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Повторить попытку", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func didSpisatTap(_ sender: Any) {
         guard let quanity = amountTextField.text else { return }
         //  Decommission in kg
         if selectedIndex == 0 {
             
-            guard let qDouble = Double(quanity) else { return } //  ALERT
+            guard let qDouble = Double(quanity) else {
+               causeAlert()
+                return
+            }
+            
+            if qDouble <= 0 {
+                causeAlert()
+                return
+            }
+            
             DispatchQueue.main.async {
                 NetworkManager.accessoryInKg(article: self.model!.article, amount: qDouble, complition: {
                     status in
@@ -104,7 +121,7 @@ class AccessoryDetailsViewController: UIViewController {
         let weight = model.weight ?? 0
         
         let weightStr =
-            (model.kgAcceptable == false) ? String(describing: Int(weight)) + "шт" : String(describing: weight) + "кг"
+            (model.kgAcceptable == false) ? String(describing: Int(weight)) + "кг" : String(describing: weight) + "кг"
         
         var amount = 0
         updateAmount()

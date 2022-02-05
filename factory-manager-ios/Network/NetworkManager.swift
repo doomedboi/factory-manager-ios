@@ -418,31 +418,6 @@ extension NetworkManager {
         task.resume()
         
     }
-    
-    static func getProductCountByOrder(orderId: Int, complition: @escaping([ProductsByOrderModel])->(Void)) {
-        guard let url = URL(string: baseURL + "/get_products_by_order_id/\(orderId)") else { return }
-        
-        let request = createGetRequest(url: url, body: nil)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            guard let data = data else { return }
-            guard let response = response as? HTTPURLResponse else {
-                return
-            }
-            print(response.statusCode)
-            do {
-                let castedData = try NetworkManager.decoder.decode([ProductsByOrderModel].self, from: data)
-                complition(castedData)
-                print("DATA:")
-                print(castedData)
-            } catch(let e) {
-                print("decode err: \(e)")
-            }
-            
-        }
-        task.resume()
-        
-    }
+
     
 }

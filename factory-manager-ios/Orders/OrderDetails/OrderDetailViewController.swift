@@ -65,10 +65,6 @@ class OrderDetailViewController: UIViewController {
             NetworkManager.getClothMapping(orderId: self.model!.id!, complition: { mapResponse in
                 self.mappingCloth = mapResponse
             })
-            self.mappingTable.reloadData()
-            NetworkManager.getProductCountByOrder(orderId: self.model!.id!, complition: { products in
-                self.productsByOrderID = products
-            })
         }
         
     }

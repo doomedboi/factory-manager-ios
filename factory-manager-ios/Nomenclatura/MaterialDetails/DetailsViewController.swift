@@ -34,7 +34,7 @@ class DetailsViewController: UIViewController {
         self.title = model?.name
         initTable()
         DispatchQueue.main.async {
-            NetworkManager.getClothByArticle(article: 123, complition: { rulonsArray in
+            NetworkManager.getClothByArticle(article: self.model!.article, complition: { rulonsArray in
                 self.rulons = rulonsArray
             })
         }
