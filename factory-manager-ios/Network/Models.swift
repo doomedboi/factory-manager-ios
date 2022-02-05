@@ -71,6 +71,11 @@ struct ProductModel: Decodable {
     let previous: Int?
 }
 
+struct ProductsByOrderModel: Decodable {
+    let product: ProductModel
+    let count: Int
+}
+
 struct accessoryAmountResponse: Decodable {
     let article: Int
     let amount: Int?

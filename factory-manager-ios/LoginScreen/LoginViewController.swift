@@ -63,7 +63,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         }
                     } onError: { err in
                         DispatchQueue.main.async {
-                            NetworkHelper.getApiErrors(errors: err.errors)
+                            let alertText = NetworkHelper.getApiErrors(errors: err.errors)
+                            let alert = UIAlertController(title: "Проверьте поля", message: alertText, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Повторить попытку", style: .cancel, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                            
                         }
                     }
                 } catch {
@@ -71,6 +75,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
         
     }
+    
     
 
 }

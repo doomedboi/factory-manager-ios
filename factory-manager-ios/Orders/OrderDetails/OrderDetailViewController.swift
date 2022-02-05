@@ -18,6 +18,8 @@ class OrderDetailViewController: UIViewController {
         }
     }
     
+    var productsByOrderID: [ProductsByOrderModel] = []
+    
     @IBOutlet weak var itemsTable: UITableView!
     @IBOutlet weak var segmentView: UISegmentedControl!
     
@@ -64,6 +66,9 @@ class OrderDetailViewController: UIViewController {
                 self.mappingCloth = mapResponse
             })
             self.mappingTable.reloadData()
+            NetworkManager.getProductCountByOrder(orderId: self.model!.id!, complition: { products in
+                self.productsByOrderID = products
+            })
         }
         
     }
@@ -152,8 +157,8 @@ extension OrderDetailViewController: UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-        
-        upcastedCell.bindOrderItem(activityData!, amount: 666)
+            print(self.productsByOrderID.count)
+            upcastedCell.bindOrderItem(activityData!, amount: 12)
         
         return upcastedCell
         } else {
